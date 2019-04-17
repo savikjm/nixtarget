@@ -1,0 +1,174 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+
+
+    <!--bower.css-->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css"/>
+
+    <style>
+        .box-upload {
+            border: 1px solid #eee;
+            background: #f6f6f6;
+            padding: 15px;
+        }
+
+        .box-upload h4 {
+            font-family: "nimbus-sans-condensed", sans-serif;
+            text-transform: uppercase;
+            color: #909090;
+            /*font-size: 2em;*/
+            font-size: 1.4em;
+            margin-bottom: 0;
+        }
+
+        .drop-box {
+            background: #F8F8F8;
+            color: #EB8C39;
+            border: 1px dashed #EB8C39;
+            text-align: center;
+            text-transform: uppercase;
+            position: relative;
+            cursor: pointer;
+            -webkit-transition: transform 0.2s ease-in-out;
+            -moz-transition: transform 0.2s ease-in-out;
+            -ms-transition: transform 0.2s ease-in-out;
+            -o-transition: transform 0.2s ease-in-out;
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .drop-box:hover {
+            -webkit-transform: scale(1.025);
+            -moz-transform: scale(1.025);
+            -ms-transform: scale(1.025);
+            -o-transform: scale(1.025);
+            transform: scale(1.025);
+        }
+
+        .drop-box::before {
+            content: "\f40a";
+            display: inline-block;
+            font-family: "Ionicons";
+            speak: none;
+            font-style: normal;
+            font-weight: normal;
+            font-variant: normal;
+            text-transform: none;
+            text-rendering: auto;
+            line-height: 1;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            top: 0;
+            width: 34px;
+            height: 34px;
+            margin: 0 10px 0 -34px;
+            font-size: 34px;
+            line-height: 28px;
+            vertical-align: middle;
+        }
+
+        .drop-box.drop-box-home {
+            position: fixed;
+            top: 60px;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            text-align: center;
+            font-size: 32px;
+            width: auto;
+            z-index: 20;
+            border: none;
+            padding: 20%;
+        }
+
+        .drop-box.drop-box-home::before {
+            display: block;
+            font-size: 180px;
+            width: 200px;
+            height: 200px;
+            margin: 0 auto;
+            line-height: 1;
+            -webkit-animation: up-down 4s infinite;
+            -o-animation: up-down 4s infinite;
+            animation: up-down 4s infinite;
+        }
+
+        .drop-box.drop-box-home:hover {
+            -webkit-transform: none;
+            -moz-transform: none;
+            -ms-transform: none;
+            -o-transform: none;
+            transform: none;
+        }
+
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.8.0/xlsx.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.8.0/jszip.js"></script>
+
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <!--bower.js-->
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="bower_components/ng-file-upload/ng-file-upload.min.js"></script>
+    <!--<script lang="javascript" src="dist/xlsx.core.min.js"></script>-->
+    <script src="bower_components/js-xlsx/xlsx.js"></script>
+    <script src="bower_components/js-xlsx/jszip.js"></script>
+    <script src="bower_components/angular-file-saver/dist/angular-file-saver.bundle.js"></script>
+
+    <script>
+
+//        window.load = function () {
+//            var fileInput = document.getElementById('fileInput');
+//            var fileDisplayArea = document.getElementById('fileDisplayArea');
+//
+//            fileInput.addEventListener('change', function(e) {
+//                var file = fileInput.files[0];
+//                var textType = 'xslx';
+//
+//                // if (file.type.match(textType)) {
+//                var reader = new FileReader();
+//
+//                reader.onload = function(e) {
+//                    fileDisplayArea.innerText = reader.result;
+//                    var data = e.target.result;
+//                    var workbook = XLSX.read(data, {type : 'binary'});
+//
+//                    workbook.SheetNames.forEach(function(sheetName){
+//                        // Here is your object
+//                        var XL_row_object = XLSX.utils.sheet_to_row_object_array(workbook.Sheets[sheetName]);
+//                        var json_object = JSON.stringify(XL_row_object);
+//                        console.log(json_object);
+//
+//                    })
+//
+//
+//                };
+//
+//                reader.readAsBinaryString(file);
+//                // } else {
+//                //     fileDisplayArea.innerText = "File not supported!"
+//                // }
+//            });
+//        }
+
+    </script>
+
+    <script src="scripts/app.js"></script>
+    <script src="scripts/routes.js"></script>
+    <script src="scripts/controllers/homeCtrl.js"></script>
+</head>
+<body ng-app="MainApp" class="layout-row">
+   <div class="container">
+       <div ui-view>
+
+       </div>
+   </div>
+
+
+</body>
+
+</html>

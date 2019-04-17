@@ -1,0 +1,5 @@
+C:\Nix\Project\Bonitet.Web\Bonitet.CRMBlokadiWin\bin\Debug\Bonitet.CRMBlokadiWin.dll
+C:\Nix\Project\Bonitet.Web\Bonitet.CRMBlokadiWin\bin\Debug\Bonitet.CRMBlokadiWin.pdb
+C:\Nix\Project\Bonitet.Web\Bonitet.CRMBlokadiWin\obj\Debug\Bonitet.CRMBlokadiWin.csprojResolveAssemblyReference.cache
+C:\Nix\Project\Bonitet.Web\Bonitet.CRMBlokadiWin\obj\Debug\Bonitet.CRMBlokadiWin.dll
+C:\Nix\Project\Bonitet.Web\Bonitet.CRMBlokadiWin\obj\Debug\Bonitet.CRMBlokadiWin.pdb

@@ -1,0 +1,634 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="BiznisMrezaTest" Class="BetaDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.\SQL2008R2;Initial Catalog=BiznisMrezaTest;Persist Security Info=True;User ID=TargetBM" SettingsObjectName="Bonitet.DAL.Properties.Settings" SettingsPropertyName="BiznisMrezaConnectionString1" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Dejnost" Member="Dejnosts">
+    <Type Name="Dejnost">
+      <Column Name="PK_Dejnost" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FK_DejnostSifra" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="OpstaKlauzulaZaBiznis" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="EvidentiraniSeDejnostiVoNadvoreshenPromet" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="FK_Subjekt" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Tip" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NadvoreshenPromet" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="PodatociteSeIzbrisani" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="DelovodenBroj" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Datum" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="DejnostSifra_Dejnost" Member="DejnostSifra" ThisKey="FK_DejnostSifra" OtherKey="PK_DejnostSifra" Type="DejnostSifra" IsForeignKey="true" />
+      <Association Name="Subjekt_Dejnost" Member="Subjekt" ThisKey="FK_Subjekt" OtherKey="PK_Subjekt" Type="Subjekt" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VidoviSubjekti" Member="VidoviSubjektis">
+    <Type Name="VidoviSubjekti">
+      <Column Name="PK_VidSubjekt" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Ime" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DejnostSifra" Member="DejnostSifras">
+    <Type Name="DejnostSifra">
+      <Column Name="PK_DejnostSifra" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PrioritetnaDejnost" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="GlavnaPrihodnaShifra" Type="System.String" DbType="NVarChar(16)" CanBeNull="true" />
+      <Column Name="GrupaShifra" Type="System.String" DbType="NVarChar(16)" CanBeNull="true" />
+      <Column Name="GrupaIme" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="OddelShifra" Type="System.String" DbType="NVarChar(16)" CanBeNull="true" />
+      <Column Name="OddelIme" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="SektorShifra" Type="System.String" DbType="NVarChar(16)" CanBeNull="true" />
+      <Column Name="SektorIme" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Association Name="DejnostSifra_Dejnost" Member="Dejnosts" ThisKey="PK_DejnostSifra" OtherKey="FK_DejnostSifra" Type="Dejnost" />
+      <Association Name="DejnostSifra_OrganizacionaEdinica" Member="OrganizacionaEdinicas" ThisKey="PK_DejnostSifra" OtherKey="FK_DejnostSifra" Type="OrganizacionaEdinica" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Delovodnik" Member="Delovodniks">
+    <Type Name="Delovodnik">
+      <Column Name="PK_Deleovodnik" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="OdobruvanjeNaPrijava" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="FK_TipNaUpis" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DelovodenBroj" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="BrojVoMaticenRegistar" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="DelovodenBrojVoMaticenRegistar" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="FK_Subjekt" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Subjekt_Delovodnik" Member="Subjekt" ThisKey="FK_Subjekt" OtherKey="PK_Subjekt" Type="Subjekt" IsForeignKey="true" />
+      <Association Name="TipNaUpi_Delovodnik" Member="TipNaUpi" ThisKey="FK_TipNaUpis" OtherKey="PK_TipNaUpis" Type="TipNaUpi" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DopolnitelniInformacii" Member="DopolnitelniInformaciis">
+    <Type Name="DopolnitelniInformacii">
+      <Column Name="PK_DopolnitelniInformacii" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DopolnitelniInformacii" Member="DopolnitelniInformacii1" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="DanocenBroj" Type="System.String" DbType="NVarChar(128)" CanBeNull="true" />
+      <Column Name="Odobrenija" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="OvlastuvanjaNaOrgan" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="PravenOsnov" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Odluka" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="EMail" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="Telefon" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="WebAdresa" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="FK_Subjekt" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Datum" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="Subjekt_DopolnitelniInformacii" Member="Subjekt" ThisKey="FK_Subjekt" OtherKey="PK_Subjekt" Type="Subjekt" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FizickoLice" Member="FizickoLices">
+    <Type Name="FizickoLice">
+      <Column Name="PK_FizickoLice" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="EMBG_EMBS" Type="System.String" DbType="NVarChar(32)" CanBeNull="true" />
+      <Column Name="Ime" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="Pol" Type="System.String" DbType="NVarChar(16)" CanBeNull="true" />
+      <Column Name="Opis" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="Adresa" Type="System.String" DbType="NVarChar(128)" CanBeNull="true" />
+      <Column Name="Telefon" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="Faks" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="WebAdresa" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="LogoUrl" Type="System.String" DbType="NVarChar(128)" CanBeNull="true" />
+      <Association Name="FizickoLice_Povrzanost" Member="Povrzanosts" ThisKey="PK_FizickoLice" OtherKey="FK_FizickoLice" Type="Povrzanost" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Gradovi" Member="Gradovis">
+    <Type Name="Gradovi">
+      <Column Name="PK_Grad" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Ime" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ipard" Member="ipards">
+    <Type Name="ipard">
+      <Column Name="EMBS_Korisnik" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="EMBS_Sleden" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ipard2" Member="ipard2s">
+    <Type Name="ipard2">
+      <Column Name="EMBS_Korisnik" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="EMBS_Sleden" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[Log]" Member="Logs">
+    <Type Name="Log">
+      <Column Name="PK_Log" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Path" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="Completed" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Exception" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="InsertDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LogCategory" Member="LogCategories">
+    <Type Name="LogCategory">
+      <Column Name="PK_LogCategory" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="LogCategory" Member="LogCategory1" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LogType" Member="LogTypes">
+    <Type Name="LogType">
+      <Column Name="PK_LogType" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="LogType" Member="LogType1" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="DescriptionMessage" Type="System.String" DbType="NVarChar(600)" CanBeNull="true" />
+      <Association Name="LogType_UserLogg" Member="UserLoggs" ThisKey="PK_LogType" OtherKey="FK_LogCategoryId" Type="UserLogg" />
+      <Association Name="LogType_UserLogg1" Member="UserLoggs1" ThisKey="PK_LogType" OtherKey="FK_LogTypeId" Type="UserLogg" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Moduli" Member="Modulis">
+    <Type Name="Moduli">
+      <Column Name="PK_Modul" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Naziv" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="Moduli_PretplatniciModuli" Member="PretplatniciModulis" ThisKey="PK_Modul" OtherKey="FK_Modul" Type="PretplatniciModuli" />
+    </Type>
+  </Table>
+  <Table Name="dbo.OrganizacionaEdinica" Member="OrganizacionaEdinicas">
+    <Type Name="OrganizacionaEdinica">
+      <Column Name="PK_OrganizacionaEdinica" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Naziv" Type="System.String" DbType="NVarChar(1024)" CanBeNull="true" />
+      <Column Name="Podbroj" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="Tip" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="Podtip" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="Opis" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="Adresa" Type="System.String" DbType="NVarChar(128)" CanBeNull="true" />
+      <Column Name="SmetkiNaPodruznica" Type="System.String" DbType="NVarChar(128)" CanBeNull="true" />
+      <Column Name="PodatociteSeIzbrisani" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="FK_DejnostSifra" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FK_Subjekt" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="OrganizacionaEdinica_Povrzanost" Member="Povrzanosts" ThisKey="PK_OrganizacionaEdinica" OtherKey="FK_OrganizacionaEdinica" Type="Povrzanost" />
+      <Association Name="OrganizacionaEdinica_RabotnoVreme" Member="RabotnoVremes" ThisKey="PK_OrganizacionaEdinica" OtherKey="FK_OrganizacionaEdinica" Type="RabotnoVreme" />
+      <Association Name="DejnostSifra_OrganizacionaEdinica" Member="DejnostSifra" ThisKey="FK_DejnostSifra" OtherKey="PK_DejnostSifra" Type="DejnostSifra" IsForeignKey="true" />
+      <Association Name="Subjekt_OrganizacionaEdinica" Member="Subjekt" ThisKey="FK_Subjekt" OtherKey="PK_Subjekt" Type="Subjekt" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.OsnovnaGlavina" Member="OsnovnaGlavinas">
+    <Type Name="OsnovnaGlavina">
+      <Column Name="PK_OsnovnaGlavina" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ParicenVlog" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="ParicenVlogValuta" Type="System.String" DbType="NVarChar(16)" CanBeNull="true" />
+      <Column Name="NeparicenVlog" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="NeparicenVlogValuta" Type="System.String" DbType="NVarChar(16)" CanBeNull="true" />
+      <Column Name="UplatenDel" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="UplatenDelValuta" Type="System.String" DbType="NVarChar(16)" CanBeNull="true" />
+      <Column Name="VkupnoOsnovnaGlavina" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="VkupnoOsnovnaGlavinaValuta" Type="System.String" DbType="NVarChar(16)" CanBeNull="true" />
+      <Column Name="BrojNaIzdadeniAkcii" Type="System.String" DbType="NVarChar(32)" CanBeNull="true" />
+      <Column Name="VkupnoBrojNaUplateniAkcii" Type="System.String" DbType="NVarChar(32)" CanBeNull="true" />
+      <Column Name="VidNaAkcii" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="NacinNaPlakjanje" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="NacinNaObjavuvanje" Type="System.String" DbType="NVarChar(128)" CanBeNull="true" />
+      <Column Name="FK_Subjekt" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Subjekt_OsnovnaGlavina" Member="Subjekt" ThisKey="FK_Subjekt" OtherKey="PK_Subjekt" Type="Subjekt" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Portfolio" Member="Portfolios">
+    <Type Name="Portfolio">
+      <Column Name="FK_Subjekt" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="FK_Pretplatnik" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="Pretplatnici_Portfolio" Member="Pretplatnici" ThisKey="FK_Pretplatnik" OtherKey="PK_Pretplatnik" Type="Pretplatnici" IsForeignKey="true" />
+      <Association Name="Subjekt_Portfolio" Member="Subjekt" ThisKey="FK_Subjekt" OtherKey="PK_Subjekt" Type="Subjekt" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Povrzanost" Member="Povrzanosts">
+    <Type Name="Povrzanost">
+      <Column Name="PK_Povrzanost" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Ogranicuvanja" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Ovlastuvanja" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="StatusVoPKD" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="TipNaOvlastuvanje1" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="TipNaSopstvenik" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="ParicenVlog" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="ParicenVlogValuta" Type="System.String" DbType="NVarChar(16)" CanBeNull="true" />
+      <Column Name="NeparicenVlog" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="NeparicenVlogValuta" Type="System.String" DbType="NVarChar(16)" CanBeNull="true" />
+      <Column Name="UplatenVlog" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="UplatenVlogValuta" Type="System.String" DbType="NVarChar(16)" CanBeNull="true" />
+      <Column Name="VkupenVlog" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="VkupenVlogValuta" Type="System.String" DbType="NVarChar(16)" CanBeNull="true" />
+      <Column Name="RokNaPlakjanje" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="VidNaOdgovornost" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="PodatociteSeIzbrisani" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="FK_FizickoLice" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FK_Subjekt" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FK_OrganizacionaEdinica" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FK_TipPovrzanost" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TipNaOvlastuvanje2" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Association Name="FizickoLice_Povrzanost" Member="FizickoLice" ThisKey="FK_FizickoLice" OtherKey="PK_FizickoLice" Type="FizickoLice" IsForeignKey="true" />
+      <Association Name="OrganizacionaEdinica_Povrzanost" Member="OrganizacionaEdinica" ThisKey="FK_OrganizacionaEdinica" OtherKey="PK_OrganizacionaEdinica" Type="OrganizacionaEdinica" IsForeignKey="true" />
+      <Association Name="Subjekt_Povrzanost" Member="Subjekt" ThisKey="FK_Subjekt" OtherKey="PK_Subjekt" Type="Subjekt" IsForeignKey="true" />
+      <Association Name="TipPovrzanost_Povrzanost" Member="TipPovrzanost" ThisKey="FK_TipPovrzanost" OtherKey="PK_TipPovrzanost" Type="TipPovrzanost" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PreparateUpis_Subjekt" Member="PreparateUpis_Subjekts">
+    <Type Name="PreparateUpis_Subjekt">
+      <Column Name="PK_UpisSubjekt" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DelovodenBroj" Type="System.String" DbType="NVarChar(64) NOT NULL" CanBeNull="false" />
+      <Column Name="OdobruvanjeNaPrijava" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="EMBS" Type="System.String" DbType="NVarChar(64) NOT NULL" CanBeNull="false" />
+      <Column Name="Path" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" />
+      <Column Name="Url" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" />
+      <Column Name="Datum" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Pretplatnici" Member="Pretplatnicis">
+    <Type Name="Pretplatnici">
+      <Column Name="PK_Pretplatnik" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="UserPass" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Salt" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Ime" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Prezime" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Telefon" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="AktivenOd" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="AktivenDo" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="NazivPL" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="AdresaPL" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="GradPL" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="EMBSPL" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="EDBPL" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TelefonPL" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="EmailPL" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="OdgovornoLice" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Aktiven" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="PortfolioLimit" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PortfolioMomentalno" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Pretplatnici_Portfolio" Member="Portfolios" ThisKey="PK_Pretplatnik" OtherKey="FK_Pretplatnik" Type="Portfolio" />
+      <Association Name="Pretplatnici_PretplatniciModuli" Member="PretplatniciModulis" ThisKey="PK_Pretplatnik" OtherKey="FK_Pretplatnik" Type="PretplatniciModuli" />
+      <Association Name="Pretplatnici_Recovery" Member="Recoveries" ThisKey="PK_Pretplatnik" OtherKey="FK_Pretplatnik" Type="Recovery" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PretplatniciModuli" Member="PretplatniciModulis">
+    <Type Name="PretplatniciModuli">
+      <Column Name="PK_PretplatnikModul" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FK_Pretplatnik" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FK_Modul" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Moduli_PretplatniciModuli" Member="Moduli" ThisKey="FK_Modul" OtherKey="PK_Modul" Type="Moduli" IsForeignKey="true" />
+      <Association Name="Pretplatnici_PretplatniciModuli" Member="Pretplatnici" ThisKey="FK_Pretplatnik" OtherKey="PK_Pretplatnik" Type="Pretplatnici" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.RabotnoVreme" Member="RabotnoVremes">
+    <Type Name="RabotnoVreme">
+      <Column Name="PK_RabotnoVreme" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="BrojNaVraboteni" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PrvaSmena" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="Pauza1" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="VtoraSmena" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="Pauza2" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="TretaSmena" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="Pauza3" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="OdPonedelnikDoPetok" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="Sabota" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="Nedela" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="Praznik" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="NerabotniDenovi" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="FK_OrganizacionaEdinica" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FK_Subjekt" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Zabeleska" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Association Name="OrganizacionaEdinica_RabotnoVreme" Member="OrganizacionaEdinica" ThisKey="FK_OrganizacionaEdinica" OtherKey="PK_OrganizacionaEdinica" Type="OrganizacionaEdinica" IsForeignKey="true" />
+      <Association Name="Subjekt_RabotnoVreme" Member="Subjekt" ThisKey="FK_Subjekt" OtherKey="PK_Subjekt" Type="Subjekt" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Recovery" Member="Recoveries">
+    <Type Name="Recovery">
+      <Column Name="PK_Recovery" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FK_Pretplatnik" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Token" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ValidThrough" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="Pretplatnici_Recovery" Member="Pretplatnici" ThisKey="FK_Pretplatnik" OtherKey="PK_Pretplatnik" Type="Pretplatnici" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Rolji" Member="Roljis">
+    <Type Name="Rolji">
+      <Column Name="PK_Rolja" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Naziv" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="Rolji_User" Member="Users" ThisKey="PK_Rolja" OtherKey="FK_Rolja" Type="User" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Sheet2$" Member="Sheet2_s">
+    <Type Name="Sheet2_">
+      <Column Name="EMBS_Korisnik" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="EMBS_Sleden" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.StecajnaPostapka" Member="StecajnaPostapkas">
+    <Type Name="StecajnaPostapka">
+      <Column Name="PK_StecajnaPostapka" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="BrojNaOdluka" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="DatumNaOdluka" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DataNaStartuvanje" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="CasNaStartuvanje" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="FazaZaPostapka" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Dispozitiv" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="StecaenSud" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="TipNaStecajnaPostapka" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="TipNaPostapka" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="FK_Subjekt" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Subjekt_StecajnaPostapka" Member="Subjekt" ThisKey="FK_Subjekt" OtherKey="PK_Subjekt" Type="Subjekt" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Subjekt" Member="Subjekts">
+    <Type Name="Subjekt">
+      <Column Name="PK_Subjekt" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="EMBS" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="CelosenNazivNaSubjektot" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="EdinstvenDelOdImetoNaSubjektot" Type="System.String" DbType="NVarChar(128)" CanBeNull="true" />
+      <Column Name="KratkoIme" Type="System.String" DbType="NVarChar(128)" CanBeNull="true" />
+      <Column Name="Sediste" Type="System.String" DbType="NVarChar(128)" CanBeNull="true" />
+      <Column Name="AktZaOsnovanje" Type="System.String" DbType="NVarChar(128)" CanBeNull="true" />
+      <Column Name="Opis" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="DatumNaOsnovanje" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="VidNaSopstvenost" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="EdinstvenDanocenBroj" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="PotekloNaKapitalot" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="GoleminaNaDelovniotSubjekt" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="OvlastuvanjaVoPrivatniotPromet" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="OdgovornostVoPrivatniotPromet" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="OrganiziranOblik" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="Odobrenija" Type="System.String" DbType="NVarChar(512)" CanBeNull="true" />
+      <Column Name="Status" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="Status_Od" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="Status_Do" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="PodracjeNaSud" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="InstitucionalenSektor" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="SistemNaUpravuvanje" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="PricinaZaPrestanok" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="OsnovaZaBrisenje" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="StatusVoPKD" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="LogoUrl" Type="System.String" DbType="NVarChar(128)" CanBeNull="true" />
+      <Column Name="DatumNaPrvicnaRegistracija" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DatumNaPoslednaPromena" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DatumNaPrestanok" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Vremetraenje" Type="System.String" DbType="NVarChar(128)" CanBeNull="true" />
+      <Column Name="VidNaSubjektNaUpis" Type="System.String" DbType="NVarChar(128)" CanBeNull="true" />
+      <Column Name="Neplakac" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="ZiroSmetka" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Telefon" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="Subjekt_Dejnost" Member="Dejnosts" ThisKey="PK_Subjekt" OtherKey="FK_Subjekt" Type="Dejnost" />
+      <Association Name="Subjekt_Delovodnik" Member="Delovodniks" ThisKey="PK_Subjekt" OtherKey="FK_Subjekt" Type="Delovodnik" />
+      <Association Name="Subjekt_DopolnitelniInformacii" Member="DopolnitelniInformaciis" ThisKey="PK_Subjekt" OtherKey="FK_Subjekt" Type="DopolnitelniInformacii" />
+      <Association Name="Subjekt_OrganizacionaEdinica" Member="OrganizacionaEdinicas" ThisKey="PK_Subjekt" OtherKey="FK_Subjekt" Type="OrganizacionaEdinica" />
+      <Association Name="Subjekt_OsnovnaGlavina" Member="OsnovnaGlavinas" ThisKey="PK_Subjekt" OtherKey="FK_Subjekt" Type="OsnovnaGlavina" />
+      <Association Name="Subjekt_Portfolio" Member="Portfolios" ThisKey="PK_Subjekt" OtherKey="FK_Subjekt" Type="Portfolio" />
+      <Association Name="Subjekt_Povrzanost" Member="Povrzanosts" ThisKey="PK_Subjekt" OtherKey="FK_Subjekt" Type="Povrzanost" />
+      <Association Name="Subjekt_RabotnoVreme" Member="RabotnoVremes" ThisKey="PK_Subjekt" OtherKey="FK_Subjekt" Type="RabotnoVreme" />
+      <Association Name="Subjekt_StecajnaPostapka" Member="StecajnaPostapkas" ThisKey="PK_Subjekt" OtherKey="FK_Subjekt" Type="StecajnaPostapka" />
+      <Association Name="Subjekt_TipStatusniPromeni_Subjekt" Member="TipStatusniPromeni_Subjekts" ThisKey="PK_Subjekt" OtherKey="FK_Subjekt" Type="TipStatusniPromeni_Subjekt" />
+      <Association Name="Subjekt_TipStatusniPromeni_Subjekt1" Member="TipStatusniPromeni_Subjekts1" ThisKey="PK_Subjekt" OtherKey="FK_Subjekt_Prevzema" Type="TipStatusniPromeni_Subjekt" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TipNaUpis" Member="TipNaUpis">
+    <Type Name="TipNaUpi">
+      <Column Name="PK_TipNaUpis" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TipNaUpis" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Association Name="TipNaUpi_Delovodnik" Member="Delovodniks" ThisKey="PK_TipNaUpis" OtherKey="FK_TipNaUpis" Type="Delovodnik" />
+      <Association Name="TipNaUpi_Upis_OrganizacionaEdinica" Member="Upis_OrganizacionaEdinicas" ThisKey="PK_TipNaUpis" OtherKey="FK_TipNaUpis" Type="Upis_OrganizacionaEdinica" />
+      <Association Name="TipNaUpi_Upis_Subjekt" Member="Upis_Subjekts" ThisKey="PK_TipNaUpis" OtherKey="FK_TipNaUpis" Type="Upis_Subjekt" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TipPovrzanost" Member="TipPovrzanosts">
+    <Type Name="TipPovrzanost">
+      <Column Name="PK_TipPovrzanost" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Povrzanost" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Association Name="TipPovrzanost_Povrzanost" Member="Povrzanosts" ThisKey="PK_TipPovrzanost" OtherKey="FK_TipPovrzanost" Type="Povrzanost" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TipStatusiPromeni" Member="TipStatusiPromenis">
+    <Type Name="TipStatusiPromeni">
+      <Column Name="PK_TipStatusNaPromena" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="StatusNaPromena" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Association Name="TipStatusiPromeni_TipStatusniPromeni_Subjekt" Member="TipStatusniPromeni_Subjekts" ThisKey="PK_TipStatusNaPromena" OtherKey="FK_TipStatusNaPromena" Type="TipStatusniPromeni_Subjekt" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TipStatusniPromeni_Subjekt" Member="TipStatusniPromeni_Subjekts">
+    <Type Name="TipStatusniPromeni_Subjekt">
+      <Column Name="PK_TipStatusNaPromena_Subjekt" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FK_TipStatusNaPromena" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FK_Subjekt" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EMBS_Prevzema" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="CelosenNazivNaSubjektot_Prevzema" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="FK_Subjekt_Prevzema" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Subjekt_TipStatusniPromeni_Subjekt" Member="Subjekt" ThisKey="FK_Subjekt" OtherKey="PK_Subjekt" Type="Subjekt" IsForeignKey="true" />
+      <Association Name="Subjekt_TipStatusniPromeni_Subjekt1" Member="Subjekt1" ThisKey="FK_Subjekt_Prevzema" OtherKey="PK_Subjekt" Type="Subjekt" IsForeignKey="true" />
+      <Association Name="TipStatusiPromeni_TipStatusniPromeni_Subjekt" Member="TipStatusiPromeni" ThisKey="FK_TipStatusNaPromena" OtherKey="PK_TipStatusNaPromena" Type="TipStatusiPromeni" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Upis_OrganizacionaEdinica" Member="Upis_OrganizacionaEdinicas">
+    <Type Name="Upis_OrganizacionaEdinica">
+      <Column Name="PK_Upis" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="OdobruvanjeNaPrijava" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="FK_TipNaUpis" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DelovodenBroj" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="BrojVoMaticenRegistar" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="DelovodenBrojVoMaticenRegistar" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="Naziv" Type="System.String" DbType="NVarChar(1024)" CanBeNull="true" />
+      <Column Name="Podbroj" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="Tip" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="Podtip" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="Opis" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="Adresa" Type="System.String" DbType="NVarChar(128)" CanBeNull="true" />
+      <Column Name="SmetkiNaPodruznica" Type="System.String" DbType="NVarChar(128)" CanBeNull="true" />
+      <Column Name="PodatociteSeIzbrisani" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="PrioritetnaDejnost" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="GlavnaPrihodnaShifra" Type="System.String" DbType="NVarChar(16)" CanBeNull="true" />
+      <Column Name="OpstaKlauzulaZaBiznis" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="EvidentiraniSeDejnostiVoNadvoreshenPromet" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="BrojNaVraboteni" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PrvaSmena" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="Pauza1" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="VtoraSmena" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="Pauza2" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="TretaSmena" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="Pauza3" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="OdPonedelnikDoPetok" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="Sabota" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="Nedela" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="Praznik" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="NerabotniDenovi" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="Ogranicuvanja" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Ovlastuvanja" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Povrzanost_StatusVoPKD" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="TipNaOvlastuvanje1" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="TipNaSopstvenik" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="Povrzanost_ParicenVlog" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Povrzanost_ParicenVlogValuta" Type="System.String" DbType="NVarChar(16)" CanBeNull="true" />
+      <Column Name="Povrzanost_NeparicenVlog" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Povrzanost_NeparicenVlogValuta" Type="System.String" DbType="NVarChar(16)" CanBeNull="true" />
+      <Column Name="Povrzanost_UplatenVlog" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Povrzanost_UplatenVlogValuta" Type="System.String" DbType="NVarChar(16)" CanBeNull="true" />
+      <Column Name="Povrzanost_VkupenVlog" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Povrzanost_VkupenVlogValuta" Type="System.String" DbType="NVarChar(16)" CanBeNull="true" />
+      <Column Name="RokNaPlakjanje" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="VidNaOdgovornost" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="PodatociteSeIzbrisani1" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Povrzanost" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="FZ_EMBG_EMBS" Type="System.String" DbType="NVarChar(32)" CanBeNull="true" />
+      <Column Name="FZ_Ime" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="FZ_Pol" Type="System.String" DbType="NVarChar(16)" CanBeNull="true" />
+      <Column Name="FZ_Opis" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="FZ_Adresa" Type="System.String" DbType="NVarChar(128)" CanBeNull="true" />
+      <Column Name="FZ_Telefon" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="FZ_Faks" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="FZ_Email" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="FZ_WebAdresa" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="TipNaOvlastuvanje2" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="Zabeleska" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Association Name="TipNaUpi_Upis_OrganizacionaEdinica" Member="TipNaUpi" ThisKey="FK_TipNaUpis" OtherKey="PK_TipNaUpis" Type="TipNaUpi" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Upis_Subjekt" Member="Upis_Subjekts">
+    <Type Name="Upis_Subjekt">
+      <Column Name="PK_Upis" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FK_TipNaUpis" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DelovodenBroj" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="BrojVoMaticenRegistar" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="DelovodenBrojVoMaticenRegistar" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="EMBS" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="CelosenNazivNaSubjektot" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="EdinstvenDelOdImetoNaSubjektot" Type="System.String" DbType="NVarChar(128)" CanBeNull="true" />
+      <Column Name="KratkoIme" Type="System.String" DbType="NVarChar(128)" CanBeNull="true" />
+      <Column Name="Sediste" Type="System.String" DbType="NVarChar(128)" CanBeNull="true" />
+      <Column Name="AktZaOsnovanje" Type="System.String" DbType="NVarChar(128)" CanBeNull="true" />
+      <Column Name="Opis" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="DatumNaOsnovanje" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="VidNaSopstvenost" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="EdinstvenDanocenBroj" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="PotekloNaKapitalot" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="GoleminaNaDelovniotSubjekt" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="OvlastuvanjaVoPrivatniotPromet" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="OdgovornostVoPrivatniotPromet" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="OrganiziranOblik" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="Odobrenija" Type="System.String" DbType="NVarChar(512)" CanBeNull="true" />
+      <Column Name="Status" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="Status_Od" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="Status_Do" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="PodracjeNaSud" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="InstitucionalenSektor" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="SistemNaUpravuvanje" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="PricinaZaPrestanok" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="OsnovaZaBrisenje" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="StatusVoPKD" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="PrioritetnaDejnost" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="GlavnaPrihodnaShifra" Type="System.String" DbType="NVarChar(16)" CanBeNull="true" />
+      <Column Name="OpstaKlauzulaZaBiznis" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="EvidentiraniSeDejnostiVoNadvoreshenPromet" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="BrojNaOdluka" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="DatumNaOdluka" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CasNaStartuvanje" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="FazaZaPostapka" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Dispozitiv" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="StecaenSud" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="TipNaStecajnaPostapka" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="TipNaPostapka" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="ParicenVlog" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="ParicenVlogValuta" Type="System.String" DbType="NVarChar(16)" CanBeNull="true" />
+      <Column Name="NeparicenVlog" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="NeparicenVlogValuta" Type="System.String" DbType="NVarChar(16)" CanBeNull="true" />
+      <Column Name="UplatenDel" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="UplatenDelValuta" Type="System.String" DbType="NVarChar(16)" CanBeNull="true" />
+      <Column Name="VkupnoOsnovnaGlavina" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="VkupnoOsnovnaGlavinaValuta" Type="System.String" DbType="NVarChar(16)" CanBeNull="true" />
+      <Column Name="BrojNaIzdadeniAkcii" Type="System.String" DbType="NVarChar(32)" CanBeNull="true" />
+      <Column Name="VkupnoBrojNaUplateniAkcii" Type="System.String" DbType="NVarChar(32)" CanBeNull="true" />
+      <Column Name="VidNaAkcii" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="NacinNaPlakjanje" Type="System.String" DbType="NVarChar(128)" CanBeNull="true" />
+      <Column Name="NacinNaObjavuvanje" Type="System.String" DbType="NVarChar(128)" CanBeNull="true" />
+      <Column Name="BrojNaVraboteni" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PrvaSmena" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="Pauza1" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="VtoraSmena" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="Pauza2" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="TretaSmena" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="Pauza3" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="OdPonedelnikDoPetok" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="Sabota" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="Nedela" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="Praznik" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="NerabotniDenovi" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="StatusNaPromena" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="EMBS_Prevzema" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="CelosenNazivNaSubjektot_Prevzema" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="DopolnitelniInformacii" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="DanocenBroj" Type="System.String" DbType="NVarChar(128)" CanBeNull="true" />
+      <Column Name="DI_Odobrenija" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="OvlastuvanjaNaOrgan" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="PravenOsnov" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Odluka" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="EMail" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="Telefon" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="WebAdresa" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="Ogranicuvanja" Type="System.String" DbType="NVarChar(2000)" CanBeNull="true" />
+      <Column Name="Ovlastuvanja" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Povrzanost_StatusVoPKD" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="TipNaOvlastuvanje1" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="TipNaSopstvenik" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="Povrzanost_ParicenVlog" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Povrzanost_ParicenVlogValuta" Type="System.String" DbType="NVarChar(16)" CanBeNull="true" />
+      <Column Name="Povrzanost_NeparicenVlog" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Povrzanost_NeparicenVlogValuta" Type="System.String" DbType="NVarChar(16)" CanBeNull="true" />
+      <Column Name="Povrzanost_UplatenVlog" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Povrzanost_UplatenVlogValuta" Type="System.String" DbType="NVarChar(16)" CanBeNull="true" />
+      <Column Name="Povrzanost_VkupenVlog" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Povrzanost_VkupenVlogValuta" Type="System.String" DbType="NVarChar(16)" CanBeNull="true" />
+      <Column Name="RokNaPlakjanje" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="VidNaOdgovornost" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="PodatociteSeIzbrisani" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Povrzanost" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="FZ_EMBG_EMBS" Type="System.String" DbType="NVarChar(32)" CanBeNull="true" />
+      <Column Name="FZ_Ime" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="FZ_Pol" Type="System.String" DbType="NVarChar(16)" CanBeNull="true" />
+      <Column Name="FZ_Opis" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="FZ_Adresa" Type="System.String" DbType="NVarChar(128)" CanBeNull="true" />
+      <Column Name="FZ_Telefon" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="FZ_Faks" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="FZ_Email" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="FZ_WebAdresa" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="OdobruvanjeNaPrijava" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DatumNaPrvicnaRegistracija" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DatumNaPoslednaPromena" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DatumNaPrestanok" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DataNaStartuvanje" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="TipNaOvlastuvanje2" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="Vremetraenje" Type="System.String" DbType="NVarChar(128)" CanBeNull="true" />
+      <Column Name="VidNaSubjektNaUpis" Type="System.String" DbType="NVarChar(128)" CanBeNull="true" />
+      <Column Name="Zabeleska" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Association Name="Upis_Subjekt_VidNaPromena_Subjekt" Member="VidNaPromena_Subjekts" ThisKey="PK_Upis" OtherKey="FK_UpisSubjekt" Type="VidNaPromena_Subjekt" />
+      <Association Name="TipNaUpi_Upis_Subjekt" Member="TipNaUpi" ThisKey="FK_TipNaUpis" OtherKey="PK_TipNaUpis" Type="TipNaUpi" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.UserLoggs" Member="UserLoggs">
+    <Type Name="UserLogg">
+      <Column Name="PK_UserLoggs" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FK_UserId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FK_LogTypeId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Time" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="FK_LogCategoryId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CustomMessage" Type="System.String" DbType="NVarChar(3000)" CanBeNull="true" />
+      <Association Name="LogType_UserLogg" Member="LogType" ThisKey="FK_LogCategoryId" OtherKey="PK_LogType" Type="LogType" IsForeignKey="true" />
+      <Association Name="LogType_UserLogg1" Member="LogType1" ThisKey="FK_LogTypeId" OtherKey="PK_LogType" Type="LogType" IsForeignKey="true" />
+      <Association Name="User_UserLogg" Member="User" ThisKey="FK_UserId" OtherKey="PK_User" Type="User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Users" Member="Users">
+    <Type Name="User">
+      <Column Name="PK_User" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="UserPass" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Salt" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Ime" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Prezime" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Aktiven" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="FK_Rolja" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="User_UserLogg" Member="UserLoggs" ThisKey="PK_User" OtherKey="FK_UserId" Type="UserLogg" />
+      <Association Name="Rolji_User" Member="Rolji" ThisKey="FK_Rolja" OtherKey="PK_Rolja" Type="Rolji" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VidNaPromena" Member="VidNaPromenas">
+    <Type Name="VidNaPromena">
+      <Column Name="PK_Promena" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="VidNaPromena" Member="VidNaPromena1" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Association Name="VidNaPromena_VidNaPromena_Subjekt" Member="VidNaPromena_Subjekts" ThisKey="PK_Promena" OtherKey="FK_VidNaPromena" Type="VidNaPromena_Subjekt" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VidNaPromena_Subjekt" Member="VidNaPromena_Subjekts">
+    <Type Name="VidNaPromena_Subjekt">
+      <Column Name="FK_VidNaPromena" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="FK_UpisSubjekt" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Path" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Association Name="Upis_Subjekt_VidNaPromena_Subjekt" Member="Upis_Subjekt" ThisKey="FK_UpisSubjekt" OtherKey="PK_Upis" Type="Upis_Subjekt" IsForeignKey="true" />
+      <Association Name="VidNaPromena_VidNaPromena_Subjekt" Member="VidNaPromena" ThisKey="FK_VidNaPromena" OtherKey="PK_Promena" Type="VidNaPromena" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

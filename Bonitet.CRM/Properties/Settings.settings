@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Bonitet.CRM.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="Bonitet_CRM_CRMService_XmlWebService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://e-test.crm.com.mk/XWSS/XmlWebService.asmx</Value>
+    </Setting>
+    <Setting Name="Bonitet_CRM_CRMServiceProxy_CRMServiceProxy" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://79.125.192.45:9000/CRMServiceProxy.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

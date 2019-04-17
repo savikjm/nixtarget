@@ -1,0 +1,16 @@
+C:\Work\Bonitet\Project\Bonitet.Charts\bin\Bonitet.Charts.dll
+C:\Work\Bonitet\Project\Bonitet.Charts\bin\Bonitet.Charts.pdb
+C:\Work\Bonitet\Project\Bonitet.Charts\obj\Debug\Bonitet.Charts.dll
+C:\Work\Bonitet\Project\Bonitet.Charts\obj\Debug\Bonitet.Charts.pdb
+C:\Work\Bonitet\Project\Bonitet.Charts\obj\Debug\Bonitet.Charts.csprojResolveAssemblyReference.cache
+C:\Nix\Project\Bonitet.Charts\bin\Bonitet.Charts.dll.config
+C:\Nix\Project\Bonitet.Charts\bin\Bonitet.Charts.dll
+C:\Nix\Project\Bonitet.Charts\bin\Bonitet.Charts.pdb
+C:\Nix\Project\Bonitet.Charts\obj\Debug\Bonitet.Charts.dll
+C:\Nix\Project\Bonitet.Charts\obj\Debug\Bonitet.Charts.pdb
+C:\Nix\Project\Bonitet.Web_Backup-27.05.2015\Bonitet.Charts\bin\Bonitet.Charts.dll.config
+C:\Nix\Project\Bonitet.Web_Backup-27.05.2015\Bonitet.Charts\bin\Bonitet.Charts.dll
+C:\Nix\Project\Bonitet.Web_Backup-27.05.2015\Bonitet.Charts\bin\Bonitet.Charts.pdb
+C:\Nix\Project\Bonitet.Web_Backup-27.05.2015\Bonitet.Charts\obj\Debug\Bonitet.Charts.csprojResolveAssemblyReference.cache
+C:\Nix\Project\Bonitet.Web_Backup-27.05.2015\Bonitet.Charts\obj\Debug\Bonitet.Charts.dll
+C:\Nix\Project\Bonitet.Web_Backup-27.05.2015\Bonitet.Charts\obj\Debug\Bonitet.Charts.pdb

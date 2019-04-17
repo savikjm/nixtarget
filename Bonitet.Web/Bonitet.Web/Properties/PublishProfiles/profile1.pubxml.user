@@ -1,0 +1,325 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>C:\Nix\Web\NewVersion</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="AboutUs.aspx">
+      <publishTime>08/17/2015 16:06:34</publishTime>
+    </File>
+    <File Include="Admin/AdminHelper.ashx">
+      <publishTime>02/11/2015 13:21:52</publishTime>
+    </File>
+    <File Include="Admin/CompanySearch.aspx">
+      <publishTime>09/02/2015 12:15:41</publishTime>
+    </File>
+    <File Include="Admin/CreatePrepayPack.aspx">
+      <publishTime>08/21/2015 12:31:15</publishTime>
+    </File>
+    <File Include="Admin/CreateUser.aspx">
+      <publishTime>08/19/2015 11:43:53</publishTime>
+    </File>
+    <File Include="Admin/Default.aspx">
+      <publishTime>08/19/2015 11:44:43</publishTime>
+    </File>
+    <File Include="Admin/EditAdmin.aspx">
+      <publishTime>08/19/2015 09:59:30</publishTime>
+    </File>
+    <File Include="Admin/EditCurrentYear.aspx">
+      <publishTime>08/19/2015 10:05:23</publishTime>
+    </File>
+    <File Include="Admin/EditUser.aspx">
+      <publishTime>08/18/2015 19:26:09</publishTime>
+    </File>
+    <File Include="Admin/GenerateReport.aspx">
+      <publishTime>10/13/2015 14:02:13</publishTime>
+    </File>
+    <File Include="Admin/PackHelper.ashx">
+      <publishTime>01/28/2015 11:29:46</publishTime>
+    </File>
+    <File Include="Admin/PrepayPackDetails.aspx">
+      <publishTime>09/02/2015 12:14:25</publishTime>
+    </File>
+    <File Include="Admin/PrepayPackEdit.aspx">
+      <publishTime>09/02/2015 12:14:48</publishTime>
+    </File>
+    <File Include="Admin/PrepayPackListing.aspx">
+      <publishTime>08/21/2015 15:45:35</publishTime>
+    </File>
+    <File Include="Admin/ReportRequestLogs.aspx">
+      <publishTime>11/17/2015 13:32:08</publishTime>
+    </File>
+    <File Include="Admin/ReportRequests.aspx">
+      <publishTime>12/04/2015 09:52:57</publishTime>
+    </File>
+    <File Include="Admin/ReportsByDate.aspx">
+      <publishTime>09/02/2015 15:14:44</publishTime>
+    </File>
+    <File Include="Admin/UserDetails.aspx">
+      <publishTime>09/02/2015 12:12:51</publishTime>
+    </File>
+    <File Include="Admin/UserListing.aspx">
+      <publishTime>08/21/2015 15:13:54</publishTime>
+    </File>
+    <File Include="Authenticated/CompanyDetails.aspx">
+      <publishTime>12/04/2015 13:05:27</publishTime>
+    </File>
+    <File Include="Authenticated/CompanyListing.aspx">
+      <publishTime>08/20/2015 14:45:33</publishTime>
+    </File>
+    <File Include="Authenticated/EditUser.aspx">
+      <publishTime>09/09/2015 10:52:07</publishTime>
+    </File>
+    <File Include="Authenticated/UserProfile.aspx">
+      <publishTime>08/20/2015 15:37:00</publishTime>
+    </File>
+    <File Include="bin/Bonitet.Charts.dll">
+      <publishTime>12/23/2015 17:18:37</publishTime>
+    </File>
+    <File Include="bin/Bonitet.CRM.dll">
+      <publishTime>11/11/2015 11:43:38</publishTime>
+    </File>
+    <File Include="bin/Bonitet.CRM.XmlSerializers.dll">
+      <publishTime>11/11/2015 11:43:39</publishTime>
+    </File>
+    <File Include="bin/Bonitet.DAL.dll">
+      <publishTime>12/23/2015 17:18:47</publishTime>
+    </File>
+    <File Include="bin/Bonitet.Document.dll">
+      <publishTime>12/23/2015 17:18:47</publishTime>
+    </File>
+    <File Include="bin/Bonitet.Web.dll">
+      <publishTime>12/23/2015 17:18:49</publishTime>
+    </File>
+    <File Include="bin/DocX.dll">
+      <publishTime>11/30/2014 15:28:39</publishTime>
+    </File>
+    <File Include="bin/HtmlAgilityPack.dll">
+      <publishTime>01/21/2015 12:03:45</publishTime>
+    </File>
+    <File Include="bin/itextsharp.dll">
+      <publishTime>11/30/2014 15:23:48</publishTime>
+    </File>
+    <File Include="bin/TuesPechkin.dll">
+      <publishTime>11/30/2014 19:48:50</publishTime>
+    </File>
+    <File Include="bonitet_mk.png">
+      <publishTime>12/04/2014 19:27:10</publishTime>
+    </File>
+    <File Include="ChartTesting.aspx">
+      <publishTime>02/11/2015 14:45:10</publishTime>
+    </File>
+    <File Include="Contact.aspx">
+      <publishTime>09/09/2015 12:20:04</publishTime>
+    </File>
+    <File Include="css/bootstrap-datetimepicker.min.css">
+      <publishTime>01/28/2015 12:26:45</publishTime>
+    </File>
+    <File Include="css/bootstrap-select.min.css">
+      <publishTime>02/03/2015 13:02:30</publishTime>
+    </File>
+    <File Include="css/bootstrap-table.css">
+      <publishTime>11/30/2014 14:02:20</publishTime>
+    </File>
+    <File Include="css/bootstrap-theme.css">
+      <publishTime>11/12/2014 09:03:22</publishTime>
+    </File>
+    <File Include="css/bootstrap-theme.css.map">
+      <publishTime>11/12/2014 09:03:22</publishTime>
+    </File>
+    <File Include="css/bootstrap-theme.min.css">
+      <publishTime>11/12/2014 09:03:24</publishTime>
+    </File>
+    <File Include="css/bootstrap.css">
+      <publishTime>11/12/2014 09:03:24</publishTime>
+    </File>
+    <File Include="css/bootstrap.css.map">
+      <publishTime>11/12/2014 09:03:22</publishTime>
+    </File>
+    <File Include="css/bootstrap.min.css">
+      <publishTime>11/12/2014 09:03:24</publishTime>
+    </File>
+    <File Include="css/font-awesome.min.css">
+      <publishTime>08/17/2015 11:46:48</publishTime>
+    </File>
+    <File Include="css/short_template.css">
+      <publishTime>01/27/2015 14:52:42</publishTime>
+    </File>
+    <File Include="css/styles.css">
+      <publishTime>11/17/2015 10:47:12</publishTime>
+    </File>
+    <File Include="css/template.css">
+      <publishTime>12/05/2014 10:33:36</publishTime>
+    </File>
+    <File Include="Default.aspx">
+      <publishTime>09/09/2015 12:24:16</publishTime>
+    </File>
+    <File Include="Document.ashx">
+      <publishTime>01/22/2015 15:49:08</publishTime>
+    </File>
+    <File Include="DocumentHelper.ashx">
+      <publishTime>01/22/2015 20:14:31</publishTime>
+    </File>
+    <File Include="favicon.ico">
+      <publishTime>09/09/2015 14:56:21</publishTime>
+    </File>
+    <File Include="fonts/fontawesome-webfont.eot">
+      <publishTime>08/17/2015 11:46:13</publishTime>
+    </File>
+    <File Include="fonts/fontawesome-webfont.svg">
+      <publishTime>08/17/2015 11:46:13</publishTime>
+    </File>
+    <File Include="fonts/fontawesome-webfont.ttf">
+      <publishTime>08/17/2015 11:46:13</publishTime>
+    </File>
+    <File Include="fonts/fontawesome-webfont.woff">
+      <publishTime>08/17/2015 11:46:13</publishTime>
+    </File>
+    <File Include="fonts/fontawesome-webfont.woff2">
+      <publishTime>08/17/2015 11:46:13</publishTime>
+    </File>
+    <File Include="fonts/FontAwesome.otf">
+      <publishTime>08/17/2015 11:46:13</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.eot">
+      <publishTime>11/11/2014 15:41:18</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.svg">
+      <publishTime>01/23/2015 10:23:48</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.ttf">
+      <publishTime>11/11/2014 15:41:18</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.woff">
+      <publishTime>11/11/2014 15:41:18</publishTime>
+    </File>
+    <File Include="img/aktiva.jpg">
+      <publishTime>01/26/2015 15:52:24</publishTime>
+    </File>
+    <File Include="img/arrows_up_down_sprite.png">
+      <publishTime>08/20/2015 13:54:57</publishTime>
+    </File>
+    <File Include="img/bonitet_mk.png">
+      <publishTime>12/04/2014 19:27:10</publishTime>
+    </File>
+    <File Include="img/content-bg.png">
+      <publishTime>08/17/2015 11:07:25</publishTime>
+    </File>
+    <File Include="img/Eboniteti logo.jpg">
+      <publishTime>02/03/2015 15:08:50</publishTime>
+    </File>
+    <File Include="img/Eboniteti logo.png">
+      <publishTime>02/03/2015 15:16:23</publishTime>
+    </File>
+    <File Include="img/eboniteti_new_logo.png">
+      <publishTime>09/02/2015 13:19:20</publishTime>
+    </File>
+    <File Include="img/ebonitet_logo.png">
+      <publishTime>02/03/2015 17:23:33</publishTime>
+    </File>
+    <File Include="img/green_light.jpg">
+      <publishTime>12/04/2014 20:56:14</publishTime>
+    </File>
+    <File Include="img/loader.gif">
+      <publishTime>01/14/2015 21:36:52</publishTime>
+    </File>
+    <File Include="img/pasiva.jpg">
+      <publishTime>01/26/2015 15:52:24</publishTime>
+    </File>
+    <File Include="img/pdf-icon.png">
+      <publishTime>02/11/2015 12:40:44</publishTime>
+    </File>
+    <File Include="img/pdf_example.pdf">
+      <publishTime>02/11/2015 12:45:48</publishTime>
+    </File>
+    <File Include="img/prihodi_trosoci.jpg">
+      <publishTime>01/26/2015 15:52:24</publishTime>
+    </File>
+    <File Include="img/target_group.png">
+      <publishTime>11/30/2014 20:58:02</publishTime>
+    </File>
+    <File Include="img/target_logo.png">
+      <publishTime>02/03/2015 17:40:55</publishTime>
+    </File>
+    <File Include="img/Општи услови - Eбонитети мк.pdf">
+      <publishTime>02/17/2015 13:42:40</publishTime>
+    </File>
+    <File Include="js/bootstrap-datetimepicker.min.js">
+      <publishTime>01/28/2015 12:26:35</publishTime>
+    </File>
+    <File Include="js/bootstrap-select.js">
+      <publishTime>02/03/2015 13:02:22</publishTime>
+    </File>
+    <File Include="js/bootstrap-table.js">
+      <publishTime>11/30/2014 14:02:45</publishTime>
+    </File>
+    <File Include="js/bootstrap.js">
+      <publishTime>11/12/2014 09:03:24</publishTime>
+    </File>
+    <File Include="js/bootstrap.min.js">
+      <publishTime>11/12/2014 09:03:24</publishTime>
+    </File>
+    <File Include="js/collapse.js">
+      <publishTime>01/28/2015 12:32:16</publishTime>
+    </File>
+    <File Include="js/companies_scripts.js">
+      <publishTime>11/30/2014 14:38:57</publishTime>
+    </File>
+    <File Include="js/jquery-1.11.1.min.js">
+      <publishTime>11/30/2014 14:03:26</publishTime>
+    </File>
+    <File Include="js/moment.js">
+      <publishTime>01/28/2015 12:31:36</publishTime>
+    </File>
+    <File Include="js/npm.js">
+      <publishTime>11/12/2014 09:03:24</publishTime>
+    </File>
+    <File Include="js/scripts.js">
+      <publishTime>12/04/2015 13:07:55</publishTime>
+    </File>
+    <File Include="LostPasswordHelper.ashx">
+      <publishTime>02/03/2015 17:58:17</publishTime>
+    </File>
+    <File Include="MasterPages/Admin.Master">
+      <publishTime>11/17/2015 13:23:03</publishTime>
+    </File>
+    <File Include="MasterPages/Default.Master">
+      <publishTime>09/09/2015 14:56:12</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>01/21/2015 12:00:33</publishTime>
+    </File>
+    <File Include="PasswordReset.aspx">
+      <publishTime>02/13/2015 13:33:33</publishTime>
+    </File>
+    <File Include="PrecompiledApp.config">
+      <publishTime>12/23/2015 17:18:52</publishTime>
+    </File>
+    <File Include="Pricelist.aspx">
+      <publishTime>09/09/2015 12:18:08</publishTime>
+    </File>
+    <File Include="short_template.html">
+      <publishTime>01/27/2015 18:56:12</publishTime>
+    </File>
+    <File Include="target_group.png">
+      <publishTime>11/30/2014 20:58:02</publishTime>
+    </File>
+    <File Include="Templates/CRM_Blokada_Template.html">
+      <publishTime>05/27/2015 11:47:25</publishTime>
+    </File>
+    <File Include="Templates/CRM_Celosen_Template.html">
+      <publishTime>10/22/2015 15:51:54</publishTime>
+    </File>
+    <File Include="Test.xml">
+      <publishTime>11/29/2014 21:16:52</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>12/13/2015 21:55:03</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

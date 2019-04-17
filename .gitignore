@@ -1,0 +1,10 @@
+bin/
+obj/
+.vs/
+*.vssscc
+*.user
+packages/
+**/Properties/
+/.idea/
+Bonitet.Web_Backup-27.05.2015/
+Bonitet.Web_NewVersion_Backup/

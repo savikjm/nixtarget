@@ -1,0 +1,4136 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Бонитетен Извештај</title>
+    <style>
+        body {
+            height: auto;
+            width: 1040px;
+            padding: 0;
+            margin: 0 auto;
+            font-family: Calibri;
+        }
+
+        .chart_container {
+            float: left;
+            width: 50%;
+            position: relative;
+        }
+
+            .chart_container img {
+                width: 100%;
+            }
+
+        .page {
+            position: relative;
+            height: 1471px;
+            width: 1040px;
+            padding: 0;
+            margin: 0;
+            float: left;
+        }
+
+        #first_page_wrapper {
+            width: 100%;
+            height: 770px;
+            float: left;
+            background-color: #B9D431;
+        }
+
+        #eigth_page_wrapger, #eleventh_page_wrapper, #fifth_page_wrapper, #fourth_page_wrapper, .fourth_page_dynamic, #ninth_page_wrapper, #second_page_wrapper, #seventh_page_wrapper, #sixth_page_wrapper, #tenth_page_wrapper, #third_page_wrapper {
+            width: 100%;
+            height: 1200px;
+            float: left;
+        }
+
+        h1 {
+            font-size: 60px;
+            margin-left: 50px;
+            margin-top: 250px;
+            padding: 0;
+            margin-bottom: 0;
+        }
+
+        h2 {
+            font-size: 36px;
+            display: inline-block;
+            margin-left: 50px;
+            color: #444;
+        }
+
+        #cover_wrapper {
+            text-align: left;
+            width: 100%;
+            float: left;
+        }
+
+        p.inline_block {
+            display: inline-block;
+            font-size: 52px;
+            margin-left: 150px;
+            margin-top: 0;
+            margin-bottom: 0;
+            color: #444;
+        }
+
+        p {
+            font-size: 22px;
+            margin-left: 50px;
+        }
+
+            p span {
+                font-weight: 700;
+            }
+
+        .spacer_100 {
+            width: 100%;
+            height: 100px;
+            float: left;
+        }
+
+        .spacer_200 {
+            width: 100%;
+            height: 200px;
+            float: left;
+        }
+
+        .footer {
+            width: 100%;
+            height: 123px;
+            background-color: #B9D431;
+            opacity: .7;
+            float: left;
+            bottom: 0;
+            position: absolute;
+        }
+
+            .footer .img_wrapper img {
+                padding-top: 0;
+                position: absolute;
+                top: 0;
+                right: 0;
+            }
+
+            .footer .img_wrapper {
+                float: left;
+                background-color: #fff !important;
+                height: 123px;
+                margin-top: 0;
+                position: absolute;
+                top: 0;
+                right: 120px;
+            }
+
+            .footer.cover_footer {
+                height: 200px;
+            }
+
+            .footer div {
+                float: left;
+                margin-top: 25px;
+                position: absolute;
+                top: 0;
+            }
+
+            .footer p {
+                padding: 0;
+                margin: 0 0 0 50px;
+            }
+
+            .footer .pagination {
+                margin: 0;
+                padding: 0;
+                width: 120px;
+                height: 123px;
+                text-align: center;
+                float: left;
+                position: absolute;
+                top: 0;
+                right: 0;
+            }
+
+                .footer .pagination p {
+                    line-height: 123px;
+                    color: #fff;
+                    font-size: 35px;
+                    margin: 0;
+                    padding: 0;
+                }
+
+        #white_cover {
+            width: 100%;
+            height: 100px;
+            float: left;
+        }
+
+            #white_cover p {
+                font-weight: 700;
+            }
+
+        .footer.cover_footer div {
+            float: left;
+            margin-top: 50px;
+        }
+
+        .footer.cover_footer .img_wrapper_cover {
+            position: absolute;
+            top: 0;
+            left: 500px;
+            float: left;
+            background-color: #fff !important;
+            width: 256px;
+            height: 200px;
+            margin-left: 220px;
+            margin-top: 0;
+        }
+
+        .footer.cover_footer p {
+            padding: 0;
+            margin: 20px 0 0 50px;
+        }
+
+        .footer.cover_footer .img_wrapper_cover img {
+            padding-top: 67px;
+        }
+
+        .header {
+            background-color: #F6F6F8;
+            width: 100%;
+            height: 135px;
+            opacity: .7;
+            border-bottom: 5px #000 solid;
+            float: left;
+            position: relative;
+        }
+
+        .float_left {
+            float: left;
+        }
+
+            .float_left h2 {
+                font-size: 50px;
+                padding: 0;
+                margin: 10px 0 0 50px;
+                color: #000;
+            }
+
+            .float_left h3 {
+                padding: 0;
+                margin: 0 0 0 50px;
+                color: #000;
+                font-size: 20px;
+            }
+
+            .float_left p {
+                margin: 0 0 0 50px;
+                font-size: 16px;
+            }
+
+        .float_right {
+            float: right;
+        }
+
+            .float_right img {
+                margin-top: 10px;
+                margin-right: 50px;
+            }
+
+        .left_p {
+            float: left;
+            width: 520px;
+        }
+
+        .right_p {
+            float: right;
+            width: 520px;
+        }
+
+        .p_wrapper {
+            width: 490px;
+            float: left;
+            margin-top: 20px;
+        }
+
+            .p_wrapper.left {
+                margin-right: 0;
+                margin-left: 30px;
+                padding-right: 0;
+            }
+
+            .p_wrapper.right {
+                margin-right: 30px;
+                margin-left: 0;
+                padding-right: 0;
+            }
+
+            .p_wrapper.full {
+                width: 960px;
+                display: block;
+                margin-left: 30px;
+            }
+
+        .podruznici_filijali {
+            border-bottom: 1px solid #000;
+            margin-bottom: 10px;
+        }
+
+            .podruznici_filijali p {
+                font-size: 20px !important;
+            }
+
+        .p_wrapper.full .p_wrapper_header {
+            width: 100%;
+        }
+
+        .p_wrapper .p_wrapper_header {
+            width: 470px;
+            float: left;
+            padding-left: 20px;
+        }
+
+        .p_wrapper_header h2 {
+            margin: 0;
+            padding: 0;
+            float: left;
+            text-transform: uppercase;
+            color: #000;
+            font-weight: 700;
+            font-size: 30px;
+        }
+
+        .p_wrapper_header p {
+            margin: 0 10px 0 0;
+            padding: 0;
+            float: right;
+        }
+
+            .p_wrapper_header p.black {
+                background-color: #000;
+                color: #fff;
+                line-height: 30px;
+            }
+
+        .p_wrapper .content {
+            float: left;
+            padding: 20px;
+            width: 450px;
+            background-color: #fff;
+        }
+
+        .p_wrapper.full .content {
+            width: 940px;
+        }
+
+        .p_wrapper .content.gray {
+            background-color: #F2F2F2;
+        }
+
+        .p_wrapper .content p {
+            margin: 0;
+            padding: 0;
+        }
+
+        .left_p.shorter, .shorter .p_wrapper.left, .shorter .p_wrapper.left .p_wrapper_header {
+            width: 340px;
+        }
+
+            .shorter .p_wrapper.left .p_wrapper_header {
+                width: 330px !important;
+            }
+
+        .left_p.shorter {
+            width: 330px !important;
+        }
+
+        .shorter .p_wrapper.left .content {
+            width: 290px;
+        }
+
+            .shorter .p_wrapper.left .content p {
+                margin-bottom: 40px;
+            }
+
+        .right_p.longer {
+            width: 700px;
+            margin-top: 40px;
+        }
+
+        .longer h3 {
+            margin: 0;
+            padding: 0;
+            font-size: 24px;
+        }
+
+        .longer .p_wrapper.right {
+            width: 674px;
+        }
+
+            .longer .p_wrapper.right .p_wrapper_header {
+                width: 674px;
+            }
+
+            .longer .p_wrapper.right .content {
+                width: 646px;
+            }
+
+        .spacer_50_600 {
+            width: 600px;
+            height: 50px;
+            float: left;
+        }
+
+        .semaphore {
+            width: 72px;
+            height: 67px;
+            float: left;
+            display: inline-block;
+        }
+
+        .semaphore_text {
+            width: 370px;
+            float: left;
+            margin-left: 8px;
+        }
+
+        .full .semaphore_text {
+            width: 600px;
+            float: left;
+            margin-left: 200px;
+        }
+
+        .rezultati_table {
+            width: 960px;
+            margin: 0;
+            padding: 0;
+            border-spacing: 0;
+        }
+
+            .rezultati_table tr td {
+                border-bottom: 1px solid #000;
+                line-height: 32px;
+            }
+
+            .rezultati_table .gray td {
+                background-color: #D9D9D9;
+                border-bottom: 0;
+            }
+
+            .rezultati_table tr td:nth-child(2), .rezultati_table tr td:nth-child(3) {
+                text-align: right;
+                width: 30%;
+            }
+
+            .rezultati_table .information td {
+                border-bottom: 0;
+            }
+
+                .rezultati_table .information td p {
+                    font-size: 15px;
+                }
+
+        .p_wrapper .content .gray {
+            background-color: #F2F2F2;
+            margin-left: -20px;
+            padding-left: 20px;
+            margin-right: -20px;
+        }
+
+        .p_wrapper .content .border_bottom {
+            border-bottom: 1px solid #000;
+            margin-top: 10px;
+        }
+
+        .header .absolute_poglavje {
+            position: absolute;
+            bottom: -20px;
+            right: 50px;
+            background-color: #7F7F7F;
+        }
+
+            .header .absolute_poglavje p {
+                margin: 0;
+                line-height: 40px;
+                font-size: 20px;
+                color: #fff;
+                padding: 0 20px;
+            }
+
+        .finansii_table {
+            width: 550px;
+            margin: 0;
+            padding: 0;
+            border-spacing: 0;
+        }
+
+        .longer p {
+            font-size: 18px !important;
+        }
+
+            .longer p span {
+                font-weight: 500 !important;
+            }
+
+        .longer .finansii_table {
+            width: 650px;
+        }
+
+        .longer .p_wrapper_header h2 {
+            padding-left: 20px;
+        }
+
+        .finansii_table tr td {
+            border-bottom: 1px solid #000;
+            line-height: 32px;
+        }
+
+        .finansii_table .gray td {
+            background-color: #D9D9D9;
+            border-bottom: 0;
+            line-height: 40px;
+        }
+
+            .finansii_table .gray td:nth-child(1) {
+                text-align: left !important;
+                padding-left: 20px;
+            }
+
+            .finansii_table .gray td:nth-child(2), .finansii_table .gray td:nth-child(3) {
+                text-align: center !important;
+            }
+
+        .finansii_table tr td:nth-child(1) {
+            text-align: right;
+        }
+
+        .finansii_table tr td:nth-child(2), .finansii_table tr td:nth-child(3) {
+            text-align: center;
+            width: 30%;
+        }
+
+        .finansii_table .information td {
+            border-bottom: 0;
+        }
+
+            .finansii_table .information td p {
+                font-size: 15px;
+            }
+
+        .promeni_table {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            border-spacing: 0;
+        }
+
+            .promeni_table tr td {
+                border-bottom: 1px solid #000;
+                line-height: 32px;
+            }
+
+            .promeni_table .gray td {
+                background-color: #D9D9D9;
+                border-bottom: 0;
+                line-height: 60px;
+            }
+
+            .promeni_table tr td:nth-child(1) {
+                text-align: center;
+            }
+
+            .promeni_table tr td {
+                text-align: left;
+            }
+
+            .promeni_table .information td {
+                border-bottom: 0;
+            }
+
+                .promeni_table .information td p {
+                    font-size: 15px;
+                }
+
+            .promeni_table tr td:nth-child(1) {
+                width: 5%;
+            }
+
+            .promeni_table tr td:nth-child(2), .promeni_table tr td:nth-child(3) {
+                width: 20%;
+            }
+
+        .kazni_table {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            border-spacing: 0;
+        }
+
+            .kazni_table tr td {
+                border-bottom: 1px solid #000;
+                line-height: 32px;
+            }
+
+            .kazni_table .gray td {
+                background-color: #D9D9D9;
+                border-bottom: 0;
+                line-height: 60px;
+            }
+
+            .kazni_table tr td:nth-child(1) {
+                text-align: center;
+            }
+
+            .kazni_table tr td {
+                text-align: left;
+            }
+
+            .kazni_table .information td {
+                border-bottom: 0;
+            }
+
+                .kazni_table .information td p {
+                    font-size: 15px;
+                }
+
+            .kazni_table tr td:nth-child(1) {
+                width: 5%;
+            }
+
+            .kazni_table tr td:nth-child(2), .kazni_table tr td:nth-child(3) {
+                width: 20%;
+            }
+
+        .bilans_table {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            border-spacing: 0;
+        }
+
+            .bilans_table tr td {
+                line-height: 20px;
+                padding-left: 20px;
+            }
+
+            .bilans_table tr.has_border td {
+                border-bottom: 1px solid #000;
+            }
+
+            .bilans_table tr td p {
+                font-size: 16px;
+            }
+
+            .bilans_table .gray td {
+                background-color: #D9D9D9;
+                border-bottom: 0;
+            }
+
+            .bilans_table .gray.text_right td {
+                text-align: right;
+                padding-right: 20px;
+            }
+
+            .bilans_table .information td {
+                border-bottom: 0;
+            }
+
+                .bilans_table .information td p {
+                    font-size: 15px;
+                }
+
+            .bilans_table .margin_top td {
+                height: 40px;
+                vertical-align: bottom;
+            }
+
+            .bilans_table.margin_top {
+                margin-top: 40px;
+                width: 850px;
+            }
+
+        .uppercase_must {
+            text-transform: uppercase !important;
+        }
+
+        .no_transform {
+            text-transform: none !important;
+        }
+
+        .charts_labels {
+            position: absolute;
+            width: 80px;
+            height: 50px;
+            font-size: 14px;
+            z-index: 100;
+            text-align: center;
+        }
+
+        .chart_label_indicator {
+            width: 10px;
+            height: 10px;
+            display: inline-block;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <div class="spacer_200"></div>
+        <div id="first_page_wrapper">
+            <h1>Бонитетен извештај</h1>
+            <div id="cover_wrapper">
+                <h2>{naziv_firma}ГРАНИТ АД Скопје [Р.Македонија]</h2>
+                <p>Датум на издавање: <span>{datum_izdavanje}22-Oct-15</span></p>
+                <p>Издаден за: <span>{Izdaden_za}stojanov</span></p>
+            </div>
+        </div>
+        <div id="white_cover">
+            <p>Таргет Груп ДОО Скопје</p>
+        </div>
+        <div class="spacer_200"></div>
+        <div class="footer cover_footer">
+            <div>
+                <p>© CREDIT REPORT, all rights reserved</p>
+                <p>www.targetgroup.mk, tel/fax: +389 (2) 3117 - 100</p>
+            </div>
+            <div class="img_wrapper_cover">
+                <img src="C:/Nix/Project/Bonitet.Web/Bonitet.Web//img/target_group.png">
+            </div>
+        </div>
+    </div>
+    <div class="page">
+        <div class="header">
+            <div class="float_left">
+                <h2>Кредитен извештај</h2>
+                <h3>{naziv_firma}ГРАНИТ АД Скопје</h3>
+                <p class="date">Издаден {datum_izdavanje}22-Oct-15</p>
+            </div>
+            <div class="float_right">
+                <img src="C:/Nix/Project/Bonitet.Web/Bonitet.Web//img/bonitet_mk.png">
+            </div>
+        </div>
+        <div id="second_page_wrapper">
+            <div class="left_p">
+                <div class="p_wrapper left">
+                    <div class="p_wrapper_header">
+                        <h2>Профил</h2>
+                        <p class="black">Поглавје 1</p>
+                    </div>
+                    <div class="content gray">
+                        <p>Назив:<span>{naziv_firma}ГРАНИТ АД Скопје</span></p>
+                        <p>
+                            Адреса:<span>{adresa_firma}
+                                ДИМИТРИЕ ЧУПОВСКИ 8 ЦЕНТАР СКОПЈЕ -
+                                ЦЕНТАР
+                            </span>
+                        </p>
+                        <p>
+                            Дејност:<span>{dejnost}
+                                42.11-ИЗГРАДБА НА ПАТИШТА И
+                                АВТОПАТИ
+                            </span>
+                        </p>
+                        <p>ЕМБС:<span>{embs}4054261</span></p>
+                        <p>ЕДБ:<span>{edb}MK4030996123112</span></p>
+                        <p>Големина на субјектот:<span>{golemina_na_subjekt}Голем</span></p>
+                        {vkupna_osnovna_glavnina}
+                        {uplaten_del}941,137,483.00 МКД
+                        {neparicen_vlog}0.00 МКД
+                    </div>
+                </div>
+                <div class="p_wrapper left">
+                    <div class="p_wrapper_header">
+                        <h2>Лица & подружници</h2>
+                        <p class="black">Поглавје 2</p>
+                    </div>
+                    <div class="content gray">
+                        <p><span>Тековни</span></p>
+                        <p class="float_left">Сопственици:<span>{tekovni_sopstvenici}3</span></p>
+                        <p class="float_right">Подружници:<span>{tekovni_podruznici}3</span></p>
+                    </div>
+                </div>
+                <div class="p_wrapper left">
+                    <div class="p_wrapper_header">
+                        <h2>Блокади</h2>
+                        <p class="black"></p>
+                    </div>
+                    <div class="content">
+                        <p><span>Тековни</span></p>
+                        <p class="float_left">Статус:<span>{tekovni_blokadi_status}</span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="right_p">
+                <div class="p_wrapper right">
+                    <div class="p_wrapper_header">
+                        <h2>Состојба</h2>
+                        <p class="black">Поглавје 3</p>
+                    </div>
+                    <div class="content">
+                        <p>{sostojba_komentar}</p>
+                    </div>
+                </div>
+                <div class="p_wrapper right">
+                    <div class="p_wrapper_header">
+                        <h2>Семафор</h2>
+                        <p class="black"></p>
+                    </div>
+                    <div class="content">
+                        <div class="semaphore">
+                            <img class="float_left" src="C:/Nix/Project/Bonitet.Web/Bonitet.Web//img/green_light.jpg">
+                        </div>
+                        <div class="semaphore_text">
+                            <p class="float_right">{solventnost_komentar}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="p_wrapper right">
+                    <div class="p_wrapper_header">
+                        <h2>Промени & солвентност</h2>
+                        <p class="black">Поглавје 4</p>
+                    </div>
+                    <div class="content">
+                        <p><span>Мината година</span></p>
+                        <p class="float_left">Промени:<span>{promeni_minata_godina}4</span></p>
+                        <p class="float_right">Солвентност:<span>{solventnost_minata_godina}0</span></p>
+                    </div>
+                </div>
+                <div class="p_wrapper right">
+                    <div class="p_wrapper_header">
+                        <h2>Казни & санкции</h2>
+                        <p class="black">Поглавје 5</p>
+                    </div>
+                    <div class="content">
+                        <p><span>Мината година</span></p>
+                        <p class="float_left">
+                            Казни & санкции :<span>{kazni_minata_godina}0</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="p_wrapper full" style="margin-top:0;">
+                <div class="p_wrapper_header">
+                    <h2>Резултати од работењето</h2>
+                    <p class="black">Поглавје 6</p>
+                </div>
+                <div class="content">
+                    <table class="rezultati_table">
+                        <tr class="gray">
+                            <td>
+                                <p><span>Категории</span></p>
+                            </td>
+                            <td>
+                                <p><span>{kategorija1}2013</span></p>
+                            </td>
+                            <td>
+                                <p><span>{kategorija2}2014</span></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p><span>Средства</span></p>
+                            </td>
+                            <td>
+                                <p>{sredstva1}8,697,836,663</p>
+                            </td>
+                            <td>
+                                <p>{sredstva2}9,455,267,440</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p><span>Капитал</span></p>
+                            </td>
+                            <td>
+                                <p>{kapital1}4,202,466,658</p>
+                            </td>
+                            <td>
+                                <p>{kapital2}4,321,104,007</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p><span>Вкупни приходи</span></p>
+                            </td>
+                            <td>
+                                <p>{vkupno_prihodi1}6,351,569,428</p>
+                            </td>
+                            <td>
+                                <p>{vkupno_prihodi2}4,080,846,035</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>
+                                    <span>
+                                        Нето добивка за деловната
+                                        година
+                                    </span>
+                                </p>
+                            </td>
+                            <td>
+                                <p>{neto_dobivka_za_delovna_godina1}311,682,343</p>
+                            </td>
+                            <td>
+                                <p>{neto_dobivka_za_delovna_godina2}188,159,611</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p><span>Просечен број на вработени</span></p>
+                            </td>
+                            <td>
+                                <p>{prosecen_broj_vraboteni1}1,660</p>
+                            </td>
+                            <td>
+                                <p>{prosecen_broj_vraboteni2}1532</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p><span>Коефициент на задолженост</span></p>
+                            </td>
+                            <td>
+                                <p>{koeficient_na_zadolzensot1}0.49</p>
+                            </td>
+                            <td>
+                                <p>{koeficient_na_zadolzensot2}0.44</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p><span>Тековен показател</span></p>
+                            </td>
+                            <td>
+                                <p>{tekoven_pokazatel1}1.48</p>
+                            </td>
+                            <td>
+                                <p>{tekoven_pokazatel2}1.64</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p><span>Поврат на средства (ROA)</span></p>
+                            </td>
+                            <td>
+                                <p>{povrat_na_sredstva1}3.58%</p>
+                            </td>
+                            <td>
+                                <p>{povrat_na_sredstva2}1.99%</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p><span>Поврат на капитал (ROE)</span></p>
+                            </td>
+                            <td>
+                                <p>{povrat_na_kapital1}7.42%</p>
+                            </td>
+                            <td>
+                                <p>{povrat_na_kapital2}4.35%</p>
+                            </td>
+                        </tr>
+                        <tr class="information">
+                            <td colspan="3">
+                                <p>
+                                    Data are shown in 1 MKD (1 EUR = 61.5 MKD
+                                    +/- 0.2) see <a href="www.nbrm.mk">www.nbrm.mk</a> for exact
+                                    exchange rates
+                                </p>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div>
+                <p>© CREDIT REPORT, all rights reserved</p>
+                <p>www.targetgroup.mk, tel/fax: +389 (2) 3117 - 100</p>
+            </div>
+            <div class="img_wrapper">
+                <img src="C:/Nix/Project/Bonitet.Web/Bonitet.Web//img/target_group.png">
+            </div>
+            <div class="pagination">
+                <p>{Page_number}1</p>
+            </div>
+        </div>
+    </div>
+    <div class="page">
+        <div class="header">
+            <div class="float_left">
+                <h2>Профил</h2>
+                <h3>{naziv_firma}ГРАНИТ АД Скопје</h3>
+                <p class="date">Издаден {datum_izdavanje}22-Oct-15</p>
+            </div>
+            <div class="absolute_poglavje">
+                <p>Поглавје 1</p>
+            </div>
+        </div>
+        <div id="third_page_wrapper">
+            <div class="left_p">
+                <div class="p_wrapper left">
+                    <div class="p_wrapper_header">
+                        <h2>Профил</h2>
+                        <p class="black"></p>
+                    </div>
+                    <div class="content gray">
+                        <p>
+                            Целосен назив:<span>{celosen_naziv_firma}
+                                Градежно друштво ГРАНИТ
+                                АД-Скопје
+                            </span>
+                        </p>
+                        <p>Правна форма:<span>{pravna_forma}АД</span></p>
+                        <p>
+                            Дејност:<span>{dejnost}
+                                42.11-ИЗГРАДБА НА ПАТИШТА И
+                                АВТОПАТИ
+                            </span>
+                        </p>
+                        {datum_osnovanje}
+                        <p>ЕМБС:<span>{embs}4054261</span></p>
+                        <p>ЕДБ:<span>{edb}MK4030996123112</span></p>
+                        <p>Големина на субјектот:<span>{golemina_na_subjekt}Голем</span></p>
+                        <p>Просечен број на вработени:<span>{prosecen_broj_vraboteni}1532</span></p>
+                        <p>ДДВ Обврзник:<span>{ddv_obvrznik}ДА</span></p>
+                    </div>
+                </div>
+                <div class="p_wrapper left">
+                    <div class="p_wrapper_header">
+                        <h2>Овластени лица</h2>
+                        <p class="black"></p>
+                    </div>
+                    <div class="content">
+                        <p class="gray"><span>Име</span></p>
+                        {OvlasteniLicaShortHTML}
+                    </div>
+                </div>
+            </div>
+            <div class="right_p">
+                <div class="p_wrapper right">
+                    <div class="p_wrapper_header">
+                        <h2>Банкарски сметки</h2>
+                        <p class="black"></p>
+                    </div>
+                    <div class="content">
+                        {BankarskiSmetkiHTML}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div>
+                <p>© CREDIT REPORT, all rights reserved</p>
+                <p>www.targetgroup.mk, tel/fax: +389 (2) 3117 - 100</p>
+            </div>
+            <div class="img_wrapper">
+                <img src="C:/Nix/Project/Bonitet.Web/Bonitet.Web//img/target_group.png">
+            </div>
+            <div class="pagination">
+                <p>{Page_number}2</p>
+            </div>
+        </div>
+    </div>
+    <div class="page">
+        <div class="header">
+            <div class="float_left">
+                <h2>Профил</h2>
+                <h3>{naziv_firma}ГРАНИТ АД Скопје</h3>
+                <p class="date">Издаден {datum_izdavanje}22-Oct-15</p>
+            </div>
+            <div class="absolute_poglavje">
+                <p>Поглавје 1</p>
+            </div>
+        </div>
+        <div class="fourth_page_dynamic">
+            <div class="left_p">
+                <div class="p_wrapper left">
+                    <div class="p_wrapper_header">
+                        <h2>Овластени лица</h2>
+                    </div>
+                    <div class="content">
+                        <div class="podruznici_filijali">
+                            <span>СТРАШО МИЛКОВСКИ</span>
+                            <p>Член на управен одбор</p>
+                        </div>
+                        <div class="podruznici_filijali">
+                            <span>ЗОРАН МИЛКОВСКИ</span>
+                            <p>Член на управен одбор, Овластено лице</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="right_p">
+                <div class="p_wrapper right">
+                    <div class="p_wrapper_header">
+                        <h2>Овластени лица</h2>
+                    </div>
+                    <div class="content">
+                        <div class="podruznici_filijali">
+                            <span>ВЕНКО ЗАФИРОВ</span>
+                            <p>Член на управен одбор</p>
+                        </div>
+                        <div class="podruznici_filijali">
+                            <span>АНДРЕА СЕРАФИМОВСКИ</span>
+                            <p>Член на управен одбор</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div>
+                <p>© CREDIT REPORT, all rights reserved</p>
+                <p>www.targetgroup.mk, tel/fax: +389 (2) 3117 - 100</p>
+            </div>
+            <div class="img_wrapper">
+                <img src="C:/Nix/Project/Bonitet.Web/Bonitet.Web//img/target_group.png">
+            </div>
+            <div class="pagination">
+                <p>{Page_number}3</p>
+            </div>
+        </div>
+    </div>
+    <div class="page">
+        <div class="header">
+            <div class="float_left">
+                <h2>Лица и подружници</h2>
+                <h3>{naziv_firma}ГРАНИТ АД Скопје</h3>
+                <p class="date">Издаден {datum_izdavanje}22-Oct-15</p>
+            </div>
+            <div class="absolute_poglavje">
+                <p>Поглавје 2</p>
+            </div>
+        </div>
+        <div id="fourth_page_wrapper">
+            <div class="left_p">
+                <div class="p_wrapper left">
+                    {SopstveniciHTML}
+                </div>
+                <div class="p_wrapper left">
+                    {OvlasteniLicaLongHTML}
+                </div>
+            </div>
+            <div class="right_p">
+                <div class="p_wrapper right">
+                    {PodruzniciFilijaliHTML}
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div>
+                <p>© CREDIT REPORT, all rights reserved</p>
+                <p>www.targetgroup.mk, tel/fax: +389 (2) 3117 - 100</p>
+            </div>
+            <div class="img_wrapper">
+                <img src="C:/Nix/Project/Bonitet.Web/Bonitet.Web//img/target_group.png">
+            </div>
+            <div class="pagination">
+                <p>{Page_number}4</p>
+            </div>
+        </div>
+    </div>
+    <div class="page">
+        <div class="header">
+            <div class="float_left">
+                <h2>Лица и подружници</h2>
+                <h3>{naziv_firma}ГРАНИТ АД Скопје</h3>
+                <p class="date">Издаден {datum_izdavanje}22-Oct-15</p>
+            </div>
+            <div class="absolute_poglavje">
+                <p>Поглавје 2</p>
+            </div>
+        </div>
+        <div class="fourth_page_dynamic" id="fourth_page_wrapper_ovlasteni0">
+            <div class="left_p">
+                <div class="p_wrapper left">
+                    <div class="p_wrapper_header">
+                        <h2>Овластени лица</h2>
+                    </div>
+                    <div class="content">
+                        <div class="podruznici_filijali">
+                            <p><span>ИВАНА МИЛКОВСКА-СИМЕВА</span></p>
+                            <p>
+                                Овластувања: Член на Надзорен одбор -
+                                занимање.дипл.инж.арх.
+                            </p>
+                            <p>Тип овластување:</p>
+                            <p>- Член на надзорен одбор</p>
+                        </div>
+                        <div class="podruznici_filijali">
+                            <p><span>РИСТО ИВАНЏИКОВ</span></p>
+                            <p>
+                                Овластувања: Член на Надзорен одбор -
+                                занимање:дипл.економист
+                            </p>
+                            <p>Тип овластување:</p>
+                            <p>- Член на надзорен одбор</p>
+                        </div>
+                        <div class="podruznici_filijali">
+                            <p><span>СТРАШО МИЛКОВСКИ</span></p>
+                            <p>
+                                Овластувања: Претседател на Управен одбор -
+                                занимање:дипл.инж.арх.
+                            </p>
+                            <p>Тип овластување:</p>
+                            <p>- Член на управен одбор</p>
+                        </div>
+                        <div class="podruznici_filijali">
+                            <p><span>ЗОРАН МИЛКОВСКИ</span></p>
+                            <p>
+                                Овластувања: Генерален директор и член на
+                                Управен одбор - дипломиран информатичар
+                            </p>
+                            <p>Тип овластување:</p>
+                            <p>- Член на управен одбор</p>
+                        </div>
+                        <div class="podruznici_filijali">
+                            <p><span>АНДРЕА СЕРАФИМОВСКИ</span></p>
+                            <p>
+                                Овластувања: Член на Управен одбор -
+                                деипл.град.инженер
+                            </p>
+                            <p>Тип овластување:</p>
+                            <p>- Член на управен одбор</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="right_p">
+                <div class="p_wrapper right">
+                    <div class="p_wrapper_header">
+                        <h2>Овластени лица</h2>
+                    </div>
+                    <div class="content">
+                        <div class="podruznici_filijali">
+                            <p><span>НИКОЛА КАЦАРСКИ</span></p>
+                            <p>
+                                Овластувања: Претседател на Надзорен одбор -
+                                занимање:дипл.правник
+                            </p>
+                            <p>Тип овластување:</p>
+                            <p>- Член на надзорен одбор</p>
+                        </div>
+                        <div class="podruznici_filijali">
+                            <p><span>ВИОЛЕТА БОЖИНОСКА</span></p>
+                            <p>
+                                Овластувања: Член на Управен одбор -
+                                занимање:дипл.правник
+                            </p>
+                            <p>Тип овластување:</p>
+                            <p>- Член на управен одбор</p>
+                        </div>
+                        <div class="podruznici_filijali">
+                            <p><span>ВЕНКО ЗАФИРОВ</span></p>
+                            <p>
+                                Овластувања: Член на Управен одбор -
+                                занимање:дипл.ел.инж.
+                            </p>
+                            <p>Тип овластување:</p>
+                            <p>- Член на управен одбор</p>
+                        </div>
+                        <div class="podruznici_filijali">
+                            <p><span>ЗОРАН МИЛКОВСКИ</span></p>
+                            <p>
+                                Овластувања: Генерален директор и член на
+                                Управен одбор - дипломиран информатичар
+                            </p>
+                            <p>Тип овластување:</p>
+                            <p>- Овластено лице</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div>
+                <p>© CREDIT REPORT, all rights reserved</p>
+                <p>www.targetgroup.mk, tel/fax: +389 (2) 3117 - 100</p>
+            </div>
+            <div class="img_wrapper">
+                <img src="C:/Nix/Project/Bonitet.Web/Bonitet.Web//img/target_group.png">
+            </div>
+            <div class="pagination">
+                <p>{Page_number}5</p>
+            </div>
+        </div>
+    </div>
+    <div class="page">
+        <div class="header">
+            <div class="float_left">
+                <h2>Состојба на компанија</h2>
+                <h3>{naziv_firma}ГРАНИТ АД Скопје</h3>
+                <p class="date">Издаден {datum_izdavanje}22-Oct-15</p>
+            </div>
+            <div class="absolute_poglavje">
+                <p>Поглавје 3</p>
+            </div>
+        </div>
+        <div id="fifth_page_wrapper">
+            <div class="p_wrapper full">
+                <div class="p_wrapper_header">
+                    <h2>Семафор</h2>
+                    <p class="black"></p>
+                </div>
+                <div class="content gray">
+                    <div class="semaphore">
+                        <img class="float_left" src="C:/Nix/Project/Bonitet.Web/Bonitet.Web//img/green_light.jpg">
+                    </div>
+                    <div class="semaphore_text">
+                        <p>{solventnost_komentar}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="left_p shorter">
+                <div class="p_wrapper left">
+                    <div class="p_wrapper_header">
+                        <h2>Финансиска проценка</h2>
+                        <p class="black"></p>
+                    </div>
+                    <div class="content">
+                        <p>{finansiska_procenka_komentar}
+                            Компанијата има ниска задолженост. Компанијата има
+                            просечна ликвидност и е во состојба да ги сервисира
+                            тековните обврски со тековните средства (без залихи)
+                            без сериозни застои. Просечните денови на плаќање се
+                            под прифатливите граници на ниво на економија.
+                            Компанијата има висока кредитна изложеност од
+                            работењето.<br>
+                            <br>
+                            Компанијата има незадоволителна ефикасност.<br>
+                            <br>
+                            Компанијата работи со висока нето профитна маржа.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class=""></div>
+            <div class="right_p longer">
+                <div class="p_wrapper right">
+                    <div class="p_wrapper_header">
+                        <h3>Ликвидност</h3>
+                        <p class="black">{likvidnost_opis_main}Просечно</p>
+                    </div>
+                    <div class="content">
+                        <table class="finansii_table">
+                            <tr class="gray">
+                                <td>
+                                    <p><span>Показател</span></p>
+                                </td>
+                                <td>
+                                    <p><span>Вредност</span></p>
+                                </td>
+                                <td>
+                                    <p><span>Опис</span></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>
+                                        <span>
+                                            Коефициент за
+                                            задолженост
+                                        </span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>{likvidnost_koeficient_za_zadolzenost}0.42</p>
+                                </td>
+                                <td>
+                                    <p>{likvidnost_opis_koeficient_za_zadolzenost}Задоволително</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p><span>Брз показател</span></p>
+                                </td>
+                                <td>
+                                    <p>{likvidnost_brz_pokazatel}1.39</p>
+                                </td>
+                                <td>
+                                    <p>{likvidnost_opis_brz_pokazatel}Просечно</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>
+                                        <span>
+                                            Просечни денови на плаќање на
+                                            обврските
+                                        </span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>{likvidnost_prosecni_denovi_na_plakanje_ovrski}205</p>
+                                </td>
+                                <td>
+                                    <p>{likvidnost_opis_prosecni_denovi}Незадоволително</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>
+                                        <span>
+                                            Кредитна изложеност од
+                                            работење
+                                        </span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>{likvidnost_kreditna_izlozenost_od_rabotenje}130%</p>
+                                </td>
+                                <td>
+                                    <p>{likvidnost_opis_kreditna_izlozenost}Незадоволително</p>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="p_wrapper right">
+                    <div class="p_wrapper_header">
+                        <h3>Ефикасност</h3>
+                        <p class="black">{efikasnost_opis_main}Просечно</p>
+                    </div>
+                    <div class="content">
+                        <table class="finansii_table">
+                            <tr class="gray">
+                                <td>
+                                    <p><span>Показател</span></p>
+                                </td>
+                                <td>
+                                    <p><span>Вредност</span></p>
+                                </td>
+                                <td>
+                                    <p><span>Опис</span></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>
+                                        <span>
+                                            Поврат на средства
+                                            (ROA)
+                                        </span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>{efikasnost_povrat_na_sredstva}1.99%</p>
+                                </td>
+                                <td>
+                                    <p>{efikasnost_opis_povrat_na_sredstva}Незадоволително</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p><span>Нето профитна маржа</span></p>
+                                </td>
+                                <td>
+                                    <p>{efikasnost_neto_profitna_marza}6.20%</p>
+                                </td>
+                                <td>
+                                    <p>{efikasnost_opis_profitna_marza}Задоволително</p>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="p_wrapper right">
+                    <div class="p_wrapper_header">
+                        <h3>Профитабилност</h3>
+                        <p class="black"></p>
+                    </div>
+                    <div class="content">
+                        <table class="finansii_table">
+                            <tr class="gray">
+                                <td>
+                                    <p><span>Ставка</span></p>
+                                </td>
+                                <td>
+                                    <p><span>{profitabilnost_stavka1}2014</span></p>
+                                </td>
+                                <td>
+                                    <p><span>{profitabilnost_stavka2}2013</span></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>
+                                        <span>
+                                            Бруто оперативна
+                                            добивка
+                                        </span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>{profitabilnost_bruto_operativna_dobivka1}724,418,602</p>
+                                </td>
+                                <td>
+                                    <p>{profitabilnost_bruto_operativna_dobivka2}1,457,328,544</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>
+                                        <span>
+                                            Нето добивка од
+                                            финансирање
+                                        </span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>{profitabilnost_neto_dobivka_od_finansiranje1}29,707,387</p>
+                                </td>
+                                <td>
+                                    <p>{profitabilnost_neto_dobivka_od_finansiranje2}38,476,767</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p><span>EBITDA</span></p>
+                                </td>
+                                <td>
+                                    <p>{profitabilnost_ebitda1}433,170,553</p>
+                                </td>
+                                <td>
+                                    <p>{profitabilnost_ebitda2}536,645,641</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p><span>EBIT</span></p>
+                                </td>
+                                <td>
+                                    <p>{profitabilnost_ebit1}180,517,913</p>
+                                </td>
+                                <td>
+                                    <p>{profitabilnost_ebit2}278,933,682</p>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div>
+                <p>© CREDIT REPORT, all rights reserved</p>
+                <p>www.targetgroup.mk, tel/fax: +389 (2) 3117 - 100</p>
+            </div>
+            <div class="img_wrapper">
+                <img src="C:/Nix/Project/Bonitet.Web/Bonitet.Web//img/target_group.png">
+            </div>
+            <div class="pagination">
+                <p>{Page_number}6</p>
+            </div>
+        </div>
+    </div>
+    <div class="page">
+        <div class="header">
+            <div class="float_left">
+                <h2>Промени & Солвентност</h2>
+                <h3>{naziv_firma}ГРАНИТ АД Скопје</h3>
+                <p class="date">Издаден {datum_izdavanje}22-Oct-15</p>
+            </div>
+            <div class="absolute_poglavje">
+                <p>Поглавје 4</p>
+            </div>
+        </div>
+        <div id="sixth_page_wrapper">
+            <div class="p_wrapper full">
+                <div class="p_wrapper_header">
+                    <h2>Историски промени</h2>
+                    <p class="black"></p>
+                </div>
+                <div class="content">
+                    <table class="promeni_table">
+                        <tr class="gray">
+                            <td>
+                                <p><span>#</span></p>
+                            </td>
+                            <td>
+                                <p><span>Датум</span></p>
+                            </td>
+                            <td>
+                                <p><span>Вид</span></p>
+                            </td>
+                            <td>
+                                <p><span>Опис</span></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>1</p>
+                            </td>
+                            <td>
+                                <p>28-May-15</p>
+                            </td>
+                            <td>
+                                <p>Управител</p>
+                            </td>
+                            <td>
+                                <p>Упис на промена</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>2</p>
+                            </td>
+                            <td>
+                                <p>20-Jan-15</p>
+                            </td>
+                            <td>
+                                <p>Управител</p>
+                            </td>
+                            <td>
+                                <p>Упис на промена</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>3</p>
+                            </td>
+                            <td>
+                                <p>14-May-15</p>
+                            </td>
+                            <td>
+                                <p>Управител</p>
+                            </td>
+                            <td>
+                                <p>Упис на промена</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>4</p>
+                            </td>
+                            <td>
+                                <p>3-Jul-15</p>
+                            </td>
+                            <td>
+                                <p>Управител</p>
+                            </td>
+                            <td>
+                                <p>Упис на промена</p>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div>
+                <p>© CREDIT REPORT, all rights reserved</p>
+                <p>www.targetgroup.mk, tel/fax: +389 (2) 3117 - 100</p>
+            </div>
+            <div class="img_wrapper">
+                <img src="C:/Nix/Project/Bonitet.Web/Bonitet.Web//img/target_group.png">
+            </div>
+            <div class="pagination">
+                <p>{Page_number}7</p>
+            </div>
+        </div>
+    </div>
+    <div class="page">
+        <div class="header">
+            <div class="float_left">
+                <h2>Промени & Солвентност</h2>
+                <h3>{naziv_firma}ГРАНИТ АД Скопје</h3>
+                <p class="date">Издаден {datum_izdavanje}22-Oct-15</p>
+            </div>
+            <div class="absolute_poglavje">
+                <p>Поглавје 4</p>
+            </div>
+        </div>
+        <div id="sixth_page_wrapper">
+            <div class="p_wrapper full">
+                <div class="p_wrapper_header">
+                    <h2>Солвентност</h2>
+                    <p class="black"></p>
+                </div>
+                <div class="content">
+                    <table class="promeni_table">
+                        <tr class="gray">
+                            <td>
+                                <p><span>#</span></p>
+                            </td>
+                            <td>
+                                <p><span>Датум</span></p>
+                            </td>
+                            <td>
+                                <p><span>Вид</span></p>
+                            </td>
+                            <td>
+                                <p><span>Опис</span></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>22-Oct-15</td>
+                            <td colspan="2">
+                                Не се евидентирани промени во
+                                солвентноста на компанијата во последните 365
+                                дена
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div>
+                <p>© CREDIT REPORT, all rights reserved</p>
+                <p>www.targetgroup.mk, tel/fax: +389 (2) 3117 - 100</p>
+            </div>
+            <div class="img_wrapper">
+                <img src="C:/Nix/Project/Bonitet.Web/Bonitet.Web//img/target_group.png">
+            </div>
+            <div class="pagination">
+                <p>{Page_number}8</p>
+            </div>
+        </div>
+    </div>
+    <div class="page">
+        <div class="header">
+            <div class="float_left">
+                <h2>Казни & Санкции</h2>
+                <h3>{naziv_firma}ГРАНИТ АД Скопје</h3>
+                <p class="date">Издаден {datum_izdavanje}22-Oct-15</p>
+            </div>
+            <div class="absolute_poglavje">
+                <p>Поглавје 5</p>
+            </div>
+        </div>
+        <div id="seventh_page_wrapper">
+            <div class="p_wrapper full">
+                <div class="p_wrapper_header">
+                    <h2>Казни & Санкции</h2>
+                    <p class="black"></p>
+                </div>
+                <div class="content">
+                    <table class="kazni_table">
+                        <tr class="gray">
+                            <td>
+                                <p><span>#</span></p>
+                            </td>
+                            <td>
+                                <p><span>Датум</span></p>
+                            </td>
+                            <td>
+                                <p><span>Вид</span></p>
+                            </td>
+                            <td>
+                                <p><span>Опис</span></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>22-Oct-15</td>
+                            <td colspan="2">
+                                Не се евидентирани казни и санкции
+                                во последните 365 дена
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="p_wrapper full">
+                <div class="p_wrapper_header">
+                    <h2>Блокади</h2>
+                    <p class="black"></p>
+                </div>
+                <div class="content">
+                    <table class="kazni_table">
+                        <tr class="gray">
+                            <td>
+                                <p><span>#</span></p>
+                            </td>
+                            <td>
+                                <p><span>Датум</span></p>
+                            </td>
+                            <td>
+                                <p><span>Вид</span></p>
+                            </td>
+                            <td>
+                                <p><span>Опис</span></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>1</p>
+                            </td>
+                            <td>
+                                <p></p>
+                            </td>
+                            <td>
+                                <p></p>
+                            </td>
+                            <td>
+                                <p></p>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div>
+                <p>© CREDIT REPORT, all rights reserved</p>
+                <p>www.targetgroup.mk, tel/fax: +389 (2) 3117 - 100</p>
+            </div>
+            <div class="img_wrapper">
+                <img src="C:/Nix/Project/Bonitet.Web/Bonitet.Web//img/target_group.png">
+            </div>
+            <div class="pagination">
+                <p>{Page_number}9</p>
+            </div>
+        </div>
+    </div>
+    <div class="page">
+        <div class="header">
+            <div class="float_left">
+                <h2>Финансиски податоци</h2>
+                <h3>{naziv_firma}ГРАНИТ АД Скопје</h3>
+                <p class="date">Издаден {datum_izdavanje}22-Oct-15</p>
+            </div>
+            <div class="absolute_poglavje">
+                <p>Поглавје 6</p>
+            </div>
+        </div>
+        <div id="eigth_page_wrapger">
+            <div class="p_wrapper full">
+                <div class="p_wrapper_header">
+                    <h2>Биланс на состојба</h2>
+                    <p class="black"></p>
+                </div>
+                <div class="content">
+                    <div class="chart_container" id="aktiva_chart">
+                        <p style="text-align:center;font-weight:bold;">
+                            Актива
+                            2014
+                        </p>
+                        <p class="charts_labels" style="top:50px;left:0;">
+                            Средства
+                            (или груп...) 0% <span class="chart_label_indicator" style="background-color:rgb(16, 181, 26);"></span>
+                        </p>
+                        <p class="charts_labels" style="top:250px;left:0;">
+                            Тековни
+                            средства 68% <span class="chart_label_indicator" style="background-color:rgb(27,103,107);"></span>
+                        </p>
+                        <p class="charts_labels" style="top:50px;right:20px;">
+                            Средства 31% <span class="chart_label_indicator" style="background-color:rgb(47, 245, 58);"></span>
+                        </p>
+                        <p class="charts_labels" style="top:250px;right:20px;">
+                            Одложени дан. средства 0% <span class="chart_label_indicator" style="background-color:rgb(140, 255, 147);"></span>
+                        </p>
+                        <p class="charts_labels" style="top:150px;right:20px;">
+                            Претплатени трошоци... 1% <span class="chart_label_indicator" style="background-color:rgb(81,149,72);"></span>
+                        </p><img src="C:/Nix/Project/Bonitet.Web/Bonitet.Web/App_Data//chart_images/d01e7d91-20a4-4593-81b8-a8817758f24d.png"
+                                 style="position:relative;margin-top:0px;z-index:1;">
+                    </div>
+                    <div class="chart_container" id="pasiva_chart">
+                        <p style="text-align:center;font-weight:bold;">
+                            Пасива
+                            2014
+                        </p>
+                        <p class="charts_labels" style="top:50px;left:20px;">
+                            Одложени плаќања на... 10% <span class="chart_label_indicator" style="background-color:rgb(16, 181, 26);"></span>
+                        </p>
+                        <p class="charts_labels" style="top:150px;left:20px;">
+                            Краткорочни обврски 42% <span class="chart_label_indicator"
+                                                          style="background-color:rgb(27,103,107);"></span>
+                        </p>
+                        <p class="charts_labels" style="top:250px;left:20px;">
+                            Долгорочни обврски 2% <span class="chart_label_indicator"
+                                                        style="background-color:rgb(81,149,72);"></span>
+                        </p>
+                        <p class="charts_labels" style="top:50px;right:0;">
+                            Обврски
+                            по основ на нетековни средства... 0% <span class="chart_label_indicator" style="background-color:rgb(47, 245, 58);"></span>
+                        </p>
+                        <p class="charts_labels" style="top:250px;right:0;">
+                            Главнина и резерви 46% <span class="chart_label_indicator"
+                                                         style="background-color:rgb(140, 255, 147);"></span>
+                        </p><img src="C:/Nix/Project/Bonitet.Web/Bonitet.Web/App_Data//chart_images/ea9f595c-2459-4b1f-893b-590b21a11013.png"
+                                 style="position:relative;margin-top:0px;z-index:1;">
+                    </div>
+                </div>
+                <div class="p_wrapper_header">
+                    <h2>Биланс на успех</h2>
+                    <p class="black"></p>
+                </div>
+                <div class="content">
+                    <div class="chart_container" id="prihodi_chart">
+                        <p style="text-align:center;font-weight:bold;">
+                            Приходи
+                            2014
+                        </p>
+                        <p class="charts_labels" style="top:250px;left:0;">
+                            Приходи
+                            од работењето 98% <span class="chart_label_indicator"
+                                                    style="background-color:rgb(27,103,107);"></span>
+                        </p>
+                        <p class="charts_labels" style="top:50px;right:20px;">
+                            Финансиски приходи 2% <span class="chart_label_indicator"
+                                                        style="background-color:rgb(16, 181, 26);"></span>
+                        </p>
+                        <p class="charts_labels" style="top:250px;right:20px;">
+                            Друго 0% <span class="chart_label_indicator" style="background-color:rgb(81,149,72);"></span>
+                        </p><img src="C:/Nix/Project/Bonitet.Web/Bonitet.Web/App_Data//chart_images/f68372e6-593c-492c-a7d6-16b3e2cbc553.png"
+                                 style="position:relative;margin-top:0px;z-index:1;">
+                    </div>
+                    <div class="chart_container" id="rashodi_chart">
+                        <p style="text-align:center;font-weight:bold;">
+                            Расходи
+                            2014
+                        </p>
+                        <p class="charts_labels" style="top:50px;left:20px;">
+                            Финансиски расходи 1% <span class="chart_label_indicator"
+                                                        style="background-color:rgb(16, 181, 26);"></span>
+                        </p>
+                        <p class="charts_labels" style="top:250px;left:20px;">
+                            Трошоци за вработените 18% <span class="chart_label_indicator" style="background-color:rgb(27,103,107);"></span>
+                        </p>
+                        <p class="charts_labels" style="top:50px;right:0;">
+                            Друго
+                            10% <span class="chart_label_indicator" style="background-color:rgb(47, 245, 58);"></span>
+                        </p>
+                        <p class="charts_labels" style="top:250px;right:0;">
+                            Расходи
+                            од основна дејност 71% <span class="chart_label_indicator"
+                                                         style="background-color:rgb(81,149,72);"></span>
+                        </p><img src="C:/Nix/Project/Bonitet.Web/Bonitet.Web/App_Data//chart_images/e61e531b-a873-4bf5-ba56-69b433cd6c0f.png"
+                                 style="position:relative;margin-top:0px;z-index:1;">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div>
+                <p>© CREDIT REPORT, all rights reserved</p>
+                <p>www.targetgroup.mk, tel/fax: +389 (2) 3117 - 100</p>
+            </div>
+            <div class="img_wrapper">
+                <img src="C:/Nix/Project/Bonitet.Web/Bonitet.Web//img/target_group.png">
+            </div>
+            <div class="pagination">
+                <p>{Page_number}10</p>
+            </div>
+        </div>
+    </div>
+    <div class="page">
+        <div class="header">
+            <div class="float_left">
+                <h2>Финансиски податоци</h2>
+                <h3>{naziv_firma}ГРАНИТ АД Скопје</h3>
+                <p class="date">Издаден {datum_izdavanje}22-Oct-15</p>
+            </div>
+            <div class="absolute_poglavje">
+                <p>Поглавје 6</p>
+            </div>
+        </div>
+        <div id="eigth_page_wrapger">
+            <div class="p_wrapper full">
+                <div class="p_wrapper_header">
+                    <h2>Биланс на состојба</h2>
+                    <p class="black"></p>
+                </div>
+                <div class="content">
+                    <table class="bilans_table">
+                        <tr class="gray text_right">
+                            <td colspan="7">
+                                <p><span>% во вкупно</span></p>
+                            </td>
+                        </tr>
+                        <tr class="gray">
+                            <td>
+                                <p><span>Категорија</span></p>
+                            </td>
+                            <td>
+                                <p></p>
+                            </td>
+                            <td>
+                                <p><span>{CurYear}2014</span></p>
+                            </td>
+                            <td>
+                                <p><span>{LastYear}2013</span></p>
+                            </td>
+                            <td>
+                                <p><span>Инд.</span></p>
+                            </td>
+                            <td>
+                                <p><span>{CurYear}2014</span></p>
+                            </td>
+                            <td>
+                                <p><span>{LastYear}2013</span></p>
+                            </td>
+                        </tr>
+                        <tr class="has_border">
+                            <td>
+                                <p><span>Нетековни средства</span></p>
+                            </td>
+                            <td>
+                                <p><span>{bilans_netekovni_sredstva}A</span></p>
+                            </td>
+                            <td>
+                                <p>{bilans_netekovni_2013}2,933,278,346</p>
+                            </td>
+                            <td>
+                                <p>{bilans_netekovni_2012}2,766,254,862</p>
+                            </td>
+                            <td>
+                                <p>{bilans_netekovni_ind}106.04</p>
+                            </td>
+                            <td>
+                                <p>{bilans_netekovni_2013_procent}31.02</p>
+                            </td>
+                            <td>
+                                <p>{bilans_netekovni_2012_procent}31.80</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Нематеријални средства</p>
+                            </td>
+                            <td>
+                                <p>{bilans_nematerijalni_sredstva}1</p>
+                            </td>
+                            <td>
+                                <p>{bilans_nematerijalni_2013}17,481,760</p>
+                            </td>
+                            <td>
+                                <p>{bilans_nematerijalni_2012}9,443,463</p>
+                            </td>
+                            <td>
+                                <p>{bilans_nematerijalni_ind}185.12</p>
+                            </td>
+                            <td>
+                                <p>{bilans_nematerijalni_2013_procent}0.18</p>
+                            </td>
+                            <td>
+                                <p>{bilans_nematerijalni_2012_procent}0.11</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Материјални средства</p>
+                            </td>
+                            <td>
+                                <p>{bilans_materijalni_sredstva}2</p>
+                            </td>
+                            <td>
+                                <p>{bilans_materijalni_2013}2,672,434,631</p>
+                            </td>
+                            <td>
+                                <p>{bilans_materijalni_2012}2,496,688,352</p>
+                            </td>
+                            <td>
+                                <p>{bilans_materijalni_ind}107.04</p>
+                            </td>
+                            <td>
+                                <p>{bilans_materijalni_2013_procent}28.26</p>
+                            </td>
+                            <td>
+                                <p>{bilans_materijalni_2012_procent}28.70</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Вложувања во недвижности</p>
+                            </td>
+                            <td>
+                                <p>{bilans_vlozuvanje_nedviznosti_sredstva}3</p>
+                            </td>
+                            <td>
+                                <p>{bilans_vlozuvanje_nedviznosti_2013}0</p>
+                            </td>
+                            <td>
+                                <p>{bilans_vlozuvanje_nedviznosti_2012}0</p>
+                            </td>
+                            <td>
+                                <p>{bilans_vlozuvanje_nedviznosti_ind}0.00</p>
+                            </td>
+                            <td>
+                                <p>{bilans_vlozuvanje_nedviznosti_2013_procent}0.00</p>
+                            </td>
+                            <td>
+                                <p>{bilans_vlozuvanje_nedviznosti_2012_procent}0.00</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Долгорочни финансиски средства</p>
+                            </td>
+                            <td>
+                                <p>{bilans_dolgorocni_sredstva_sredstva}4</p>
+                            </td>
+                            <td>
+                                <p>{bilans_dolgorocni_sredstva_2013}232,515,907</p>
+                            </td>
+                            <td>
+                                <p>{bilans_dolgorocni_sredstva_2012}248,627,622</p>
+                            </td>
+                            <td>
+                                <p>{bilans_dolgorocni_sredstva_ind}93.52</p>
+                            </td>
+                            <td>
+                                <p>{bilans_dolgorocni_sredstva_2013_procent}2.46</p>
+                            </td>
+                            <td>
+                                <p>{bilans_dolgorocni_sredstva_2012_procent}2.86</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Долгорочни побарувања</p>
+                            </td>
+                            <td>
+                                <p>5</p>
+                            </td>
+                            <td>
+                                <p>10,846,048</p>
+                            </td>
+                            <td>
+                                <p>11,495,425</p>
+                            </td>
+                            <td>
+                                <p>94.35</p>
+                            </td>
+                            <td>
+                                <p>0.11</p>
+                            </td>
+                            <td>
+                                <p>0.13</p>
+                            </td>
+                        </tr>
+                        <tr class="has_border">
+                            <td>
+                                <p><span>Одложени даночни средства</span></p>
+                            </td>
+                            <td>
+                                <p><span>B</span></p>
+                            </td>
+                            <td>
+                                <p>0</p>
+                            </td>
+                            <td>
+                                <p>0</p>
+                            </td>
+                            <td>
+                                <p>0.00</p>
+                            </td>
+                            <td>
+                                <p>0.00</p>
+                            </td>
+                            <td>
+                                <p>0.00</p>
+                            </td>
+                        </tr>
+                        <tr class="has_border">
+                            <td>
+                                <p><span>Тековни средства</span></p>
+                            </td>
+                            <td>
+                                <p><span>C</span></p>
+                            </td>
+                            <td>
+                                <p>6,454,179,197</p>
+                            </td>
+                            <td>
+                                <p>5,893,505,573</p>
+                            </td>
+                            <td>
+                                <p>109.51</p>
+                            </td>
+                            <td>
+                                <p>68.26</p>
+                            </td>
+                            <td>
+                                <p>67.76</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Залихи</p>
+                            </td>
+                            <td>
+                                <p>1</p>
+                            </td>
+                            <td>
+                                <p>974,047,759</p>
+                            </td>
+                            <td>
+                                <p>879,698,848</p>
+                            </td>
+                            <td>
+                                <p>110.73</p>
+                            </td>
+                            <td>
+                                <p>10.30</p>
+                            </td>
+                            <td>
+                                <p>10.11</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Краткорочни побарувања</p>
+                            </td>
+                            <td>
+                                <p>2</p>
+                            </td>
+                            <td>
+                                <p>4,205,164,098</p>
+                            </td>
+                            <td>
+                                <p>4,358,220,280</p>
+                            </td>
+                            <td>
+                                <p>96.49</p>
+                            </td>
+                            <td>
+                                <p>44.47</p>
+                            </td>
+                            <td>
+                                <p>50.11</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Краткорочни финансиски средства</p>
+                            </td>
+                            <td>
+                                <p>3</p>
+                            </td>
+                            <td>
+                                <p>301,432,347</p>
+                            </td>
+                            <td>
+                                <p>311,971,487</p>
+                            </td>
+                            <td>
+                                <p>96.62</p>
+                            </td>
+                            <td>
+                                <p>3.19</p>
+                            </td>
+                            <td>
+                                <p>3.59</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Парични средства и парични еквиваленти</p>
+                            </td>
+                            <td>
+                                <p>4</p>
+                            </td>
+                            <td>
+                                <p>973,534,993</p>
+                            </td>
+                            <td>
+                                <p>343,614,958</p>
+                            </td>
+                            <td>
+                                <p>283.32</p>
+                            </td>
+                            <td>
+                                <p>10.30</p>
+                            </td>
+                            <td>
+                                <p>3.95</p>
+                            </td>
+                        </tr>
+                        <tr class="has_border">
+                            <td>
+                                <p>
+                                    <span>
+                                        Средства (или групи а отуѓување
+                                        наменети за ...
+                                    </span>
+                                </p>
+                            </td>
+                            <td>
+                                <p><span>D</span></p>
+                            </td>
+                            <td>
+                                <p>0</p>
+                            </td>
+                            <td>
+                                <p>0</p>
+                            </td>
+                            <td>
+                                <p>0.00</p>
+                            </td>
+                            <td>
+                                <p>0.00</p>
+                            </td>
+                            <td>
+                                <p>0.00</p>
+                            </td>
+                        </tr>
+                        <tr class="has_border">
+                            <td>
+                                <p>
+                                    <span>
+                                        Платени трошоци за идните периоди и
+                                        пресметан ...
+                                    </span>
+                                </p>
+                            </td>
+                            <td>
+                                <p><span>E</span></p>
+                            </td>
+                            <td>
+                                <p>67,809,897</p>
+                            </td>
+                            <td>
+                                <p>38,076,228</p>
+                            </td>
+                            <td>
+                                <p>178.09</p>
+                            </td>
+                            <td>
+                                <p>0.72</p>
+                            </td>
+                            <td>
+                                <p>0.44</p>
+                            </td>
+                        </tr>
+                        <tr class="has_border">
+                            <td>
+                                <p><span>Вкупна актива</span></p>
+                            </td>
+                            <td>
+                                <p></p>
+                            </td>
+                            <td>
+                                <p>9,455,267,440</p>
+                            </td>
+                            <td>
+                                <p>8,697,836,663</p>
+                            </td>
+                            <td>
+                                <p>108.71</p>
+                            </td>
+                            <td>
+                                <p>100.00</p>
+                            </td>
+                            <td>
+                                <p>100.00</p>
+                            </td>
+                        </tr>
+                        <tr class="has_border">
+                            <td>
+                                <p><span>Главнина и резерви</span></p>
+                            </td>
+                            <td>
+                                <p><span>A</span></p>
+                            </td>
+                            <td>
+                                <p>4,321,104,007</p>
+                            </td>
+                            <td>
+                                <p>4,202,466,658</p>
+                            </td>
+                            <td>
+                                <p>102.82</p>
+                            </td>
+                            <td>
+                                <p>45.70</p>
+                            </td>
+                            <td>
+                                <p>48.32</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Основна главнина</p>
+                            </td>
+                            <td>
+                                <p>1</p>
+                            </td>
+                            <td>
+                                <p>932,365,970</p>
+                            </td>
+                            <td>
+                                <p>932,524,570</p>
+                            </td>
+                            <td>
+                                <p>99.98</p>
+                            </td>
+                            <td>
+                                <p>9.86</p>
+                            </td>
+                            <td>
+                                <p>10.72</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Премии на емитирани акции</p>
+                            </td>
+                            <td>
+                                <p>2</p>
+                            </td>
+                            <td>
+                                <p>51,894,626</p>
+                            </td>
+                            <td>
+                                <p>51,894,626</p>
+                            </td>
+                            <td>
+                                <p>100</p>
+                            </td>
+                            <td>
+                                <p>0.55</p>
+                            </td>
+                            <td>
+                                <p>0.60</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Сопствени акции</p>
+                            </td>
+                            <td>
+                                <p>3</p>
+                            </td>
+                            <td>
+                                <p>0</p>
+                            </td>
+                            <td>
+                                <p>0</p>
+                            </td>
+                            <td>
+                                <p>0.00</p>
+                            </td>
+                            <td>
+                                <p>0.00</p>
+                            </td>
+                            <td>
+                                <p>0.00</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Запишан, неуплатен капитал</p>
+                            </td>
+                            <td>
+                                <p>4</p>
+                            </td>
+                            <td>
+                                <p>0</p>
+                            </td>
+                            <td>
+                                <p>0</p>
+                            </td>
+                            <td>
+                                <p>0.00</p>
+                            </td>
+                            <td>
+                                <p>0.00</p>
+                            </td>
+                            <td>
+                                <p>0.00</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>
+                                    Ревалоризациска резерва и разлики од
+                                    вреднување на ...
+                                </p>
+                            </td>
+                            <td>
+                                <p>5</p>
+                            </td>
+                            <td>
+                                <p>13,054,802</p>
+                            </td>
+                            <td>
+                                <p>13,054,802</p>
+                            </td>
+                            <td>
+                                <p>100</p>
+                            </td>
+                            <td>
+                                <p>0.14</p>
+                            </td>
+                            <td>
+                                <p>0.15</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Резерви</p>
+                            </td>
+                            <td>
+                                <p>6</p>
+                            </td>
+                            <td>
+                                <p>1,542,175,331</p>
+                            </td>
+                            <td>
+                                <p>1,542,175,330</p>
+                            </td>
+                            <td>
+                                <p>100.00</p>
+                            </td>
+                            <td>
+                                <p>16.31</p>
+                            </td>
+                            <td>
+                                <p>17.73</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Акумулирана добивка</p>
+                            </td>
+                            <td>
+                                <p>7</p>
+                            </td>
+                            <td>
+                                <p>1,593,453,668</p>
+                            </td>
+                            <td>
+                                <p>1,351,134,987</p>
+                            </td>
+                            <td>
+                                <p>117.93</p>
+                            </td>
+                            <td>
+                                <p>16.85</p>
+                            </td>
+                            <td>
+                                <p>15.53</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Пренесена загуба</p>
+                            </td>
+                            <td>
+                                <p>8</p>
+                            </td>
+                            <td>
+                                <p>0</p>
+                            </td>
+                            <td>
+                                <p>0</p>
+                            </td>
+                            <td>
+                                <p>0.00</p>
+                            </td>
+                            <td>
+                                <p>0.00</p>
+                            </td>
+                            <td>
+                                <p>0.00</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Добивка за деловната година</p>
+                            </td>
+                            <td>
+                                <p>9</p>
+                            </td>
+                            <td>
+                                <p>188,159,610</p>
+                            </td>
+                            <td>
+                                <p>311,682,343</p>
+                            </td>
+                            <td>
+                                <p>60.37</p>
+                            </td>
+                            <td>
+                                <p>1.99</p>
+                            </td>
+                            <td>
+                                <p>3.58</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Загуба за деловната година</p>
+                            </td>
+                            <td>
+                                <p>10</p>
+                            </td>
+                            <td>
+                                <p>0</p>
+                            </td>
+                            <td>
+                                <p>0</p>
+                            </td>
+                            <td>
+                                <p>N/A</p>
+                            </td>
+                            <td>
+                                <p>0.00</p>
+                            </td>
+                            <td>
+                                <p>0.00</p>
+                            </td>
+                        </tr>
+                        <tr class="has_border">
+                            <td>
+                                <p><span>Обврски</span></p>
+                            </td>
+                            <td>
+                                <p><span>B</span></p>
+                            </td>
+                            <td>
+                                <p>4,174,883,936</p>
+                            </td>
+                            <td>
+                                <p>4,262,734,602</p>
+                            </td>
+                            <td>
+                                <p>97.94</p>
+                            </td>
+                            <td>
+                                <p>44.15</p>
+                            </td>
+                            <td>
+                                <p>49.01</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>
+                                    Долгорочни резервирања на ризици и
+                                    трошоци
+                                </p>
+                            </td>
+                            <td>
+                                <p>1</p>
+                            </td>
+                            <td>
+                                <p>179,569,521</p>
+                            </td>
+                            <td>
+                                <p>174,384,713</p>
+                            </td>
+                            <td>
+                                <p>102.97</p>
+                            </td>
+                            <td>
+                                <p>1.90</p>
+                            </td>
+                            <td>
+                                <p>2.00</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Долгорочни обврски</p>
+                            </td>
+                            <td>
+                                <p>2</p>
+                            </td>
+                            <td>
+                                <p>49,914,534</p>
+                            </td>
+                            <td>
+                                <p>107,737,026</p>
+                            </td>
+                            <td>
+                                <p>46.33</p>
+                            </td>
+                            <td>
+                                <p>0.53</p>
+                            </td>
+                            <td>
+                                <p>1.24</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Краткорочни обврски</p>
+                            </td>
+                            <td>
+                                <p>3</p>
+                            </td>
+                            <td>
+                                <p>3,945,399,881</p>
+                            </td>
+                            <td>
+                                <p>3,980,612,863</p>
+                            </td>
+                            <td>
+                                <p>99.12</p>
+                            </td>
+                            <td>
+                                <p>41.73</p>
+                            </td>
+                            <td>
+                                <p>45.77</p>
+                            </td>
+                        </tr>
+                        <tr class="has_border">
+                            <td>
+                                <p><span>Одложени даночни обврски</span></p>
+                            </td>
+                            <td>
+                                <p><span>C</span></p>
+                            </td>
+                            <td>
+                                <p>0</p>
+                            </td>
+                            <td>
+                                <p>0</p>
+                            </td>
+                            <td>
+                                <p>0.00</p>
+                            </td>
+                            <td>
+                                <p>0.00</p>
+                            </td>
+                            <td>
+                                <p>0.00</p>
+                            </td>
+                        </tr>
+                        <tr class="has_border">
+                            <td>
+                                <p>
+                                    <span>
+                                        Одложено плаќање и приходи во идните
+                                        периоди
+                                    </span>
+                                </p>
+                            </td>
+                            <td>
+                                <p><span>D</span></p>
+                            </td>
+                            <td>
+                                <p>959,279,497</p>
+                            </td>
+                            <td>
+                                <p>232,635,403</p>
+                            </td>
+                            <td>
+                                <p>412.35</p>
+                            </td>
+                            <td>
+                                <p>10.15</p>
+                            </td>
+                            <td>
+                                <p>2.67</p>
+                            </td>
+                        </tr>
+                        <tr class="has_border">
+                            <td>
+                                <p>
+                                    <span>
+                                        Обврски по основ на нетековни средства
+                                        (или груп...
+                                    </span>
+                                </p>
+                            </td>
+                            <td>
+                                <p><span>E</span></p>
+                            </td>
+                            <td>
+                                <p>0</p>
+                            </td>
+                            <td>
+                                <p>0</p>
+                            </td>
+                            <td>
+                                <p>0.00</p>
+                            </td>
+                            <td>
+                                <p>0.00</p>
+                            </td>
+                            <td>
+                                <p>0.00</p>
+                            </td>
+                        </tr>
+                        <tr class="has_border">
+                            <td>
+                                <p><span>Вкупна пасива</span></p>
+                            </td>
+                            <td>
+                                <p></p>
+                            </td>
+                            <td>
+                                <p>9,455,267,440</p>
+                            </td>
+                            <td>
+                                <p>8,697,836,663</p>
+                            </td>
+                            <td>
+                                <p>108.71</p>
+                            </td>
+                            <td>
+                                <p>100.00</p>
+                            </td>
+                            <td>
+                                <p>100.00</p>
+                            </td>
+                        </tr>
+                        <tr class="information">
+                            <td colspan="7">
+                                <p>
+                                    Data are shown in 1 MKD (1 EUR = 61.5 MKD
+                                    +/- 0.2) see <a href="www.nbrm.mk">www.nbrm.mk</a> for exact
+                                    exchange rates
+                                </p>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div>
+                <p>© CREDIT REPORT, all rights reserved</p>
+                <p>www.targetgroup.mk, tel/fax: +389 (2) 3117 - 100</p>
+            </div>
+            <div class="img_wrapper">
+                <img src="C:/Nix/Project/Bonitet.Web/Bonitet.Web//img/target_group.png">
+            </div>
+            <div class="pagination">
+                <p>{Page_number}11</p>
+            </div>
+        </div>
+    </div>
+    <div class="page">
+        <div class="header">
+            <div class="float_left">
+                <h2>Финансиски податоци</h2>
+                <h3>{naziv_firma}ГРАНИТ АД Скопје</h3>
+                <p class="date">Издаден {datum_izdavanje}22-Oct-15</p>
+            </div>
+            <div class="absolute_poglavje">
+                <p>Поглавје 6</p>
+            </div>
+        </div>
+        <div id="ninth_page_wrapper">
+            <div class="p_wrapper full">
+                <div class="p_wrapper_header">
+                    <h2>Биланс на успех</h2>
+                    <p class="black"></p>
+                </div>
+                <div class="content">
+                    <table class="bilans_table">
+                        <tr class="gray text_right">
+                            <td colspan="7">
+                                <p><span>% во вкупно</span></p>
+                            </td>
+                        </tr>
+                        <tr class="gray">
+                            <td>
+                                <p><span>Категорија</span></p>
+                            </td>
+                            <td>
+                                <p></p>
+                            </td>
+                            <td>
+                                <p><span>2014</span></p>
+                            </td>
+                            <td>
+                                <p><span>2013</span></p>
+                            </td>
+                            <td>
+                                <p><span>Инд.</span></p>
+                            </td>
+                            <td>
+                                <p><span>2014</span></p>
+                            </td>
+                            <td>
+                                <p><span>2013</span></p>
+                            </td>
+                        </tr>
+                        <tr class="has_border">
+                            <td>
+                                <p><span>Приходи од работењето</span></p>
+                            </td>
+                            <td>
+                                <p>1</p>
+                            </td>
+                            <td>
+                                <p>4,009,319,377</p>
+                            </td>
+                            <td>
+                                <p>6,288,958,821</p>
+                            </td>
+                            <td>
+                                <p>63.75</p>
+                            </td>
+                            <td>
+                                <p>98.25</p>
+                            </td>
+                            <td>
+                                <p>99.01</p>
+                            </td>
+                        </tr>
+                        <tr class="has_border">
+                            <td>
+                                <p><span>Финансиски приходи</span></p>
+                            </td>
+                            <td>
+                                <p>2</p>
+                            </td>
+                            <td>
+                                <p>66,598,889</p>
+                            </td>
+                            <td>
+                                <p>62,610,607</p>
+                            </td>
+                            <td>
+                                <p>106.37</p>
+                            </td>
+                            <td>
+                                <p>1.63</p>
+                            </td>
+                            <td>
+                                <p>0.99</p>
+                            </td>
+                        </tr>
+                        <tr class="has_border">
+                            <td>
+                                <p>
+                                    <span>
+                                        Удел во добивката на придружените
+                                        друштва
+                                    </span>
+                                </p>
+                            </td>
+                            <td>
+                                <p>3</p>
+                            </td>
+                            <td>
+                                <p>4,927,769</p>
+                            </td>
+                            <td>
+                                <p>0</p>
+                            </td>
+                            <td>
+                                <p>N/A</p>
+                            </td>
+                            <td>
+                                <p>0.13</p>
+                            </td>
+                            <td>
+                                <p>0.00</p>
+                            </td>
+                        </tr>
+                        <tr class="has_border">
+                            <td>
+                                <p><span>Вкупно приходи</span></p>
+                            </td>
+                            <td>
+                                <p></p>
+                            </td>
+                            <td>
+                                <p>4,080,846,035</p>
+                            </td>
+                            <td>
+                                <p>6,351,569,428</p>
+                            </td>
+                            <td>
+                                <p>64.25</p>
+                            </td>
+                            <td>
+                                <p>100.00</p>
+                            </td>
+                            <td>
+                                <p>100.00</p>
+                            </td>
+                        </tr>
+                        <tr class="has_border margin_top">
+                            <td>
+                                <p><span>Расходи од работењето</span></p>
+                            </td>
+                            <td>
+                                <p>1</p>
+                            </td>
+                            <td>
+                                <p>3,828,801,464</p>
+                            </td>
+                            <td>
+                                <p>6,010,025,139</p>
+                            </td>
+                            <td>
+                                <p>63.71</p>
+                            </td>
+                            <td>
+                                <p>99.05</p>
+                            </td>
+                            <td>
+                                <p>99.57</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Расходи од основна дејност</p>
+                            </td>
+                            <td>
+                                <p></p>
+                            </td>
+                            <td>
+                                <p>2,311,420,795</p>
+                            </td>
+                            <td>
+                                <p>4,439,382,119</p>
+                            </td>
+                            <td>
+                                <p>52.07</p>
+                            </td>
+                            <td>
+                                <p>59.79</p>
+                            </td>
+                            <td>
+                                <p>73.55</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Останати трошоци од работењето</p>
+                            </td>
+                            <td>
+                                <p></p>
+                            </td>
+                            <td>
+                                <p>116,013,548</p>
+                            </td>
+                            <td>
+                                <p>114,428,619</p>
+                            </td>
+                            <td>
+                                <p>101.39</p>
+                            </td>
+                            <td>
+                                <p>3.00</p>
+                            </td>
+                            <td>
+                                <p>1.90</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Трошоци за вработени</p>
+                            </td>
+                            <td>
+                                <p></p>
+                            </td>
+                            <td>
+                                <p>691,562,227</p>
+                            </td>
+                            <td>
+                                <p>628,633,320</p>
+                            </td>
+                            <td>
+                                <p>110.01</p>
+                            </td>
+                            <td>
+                                <p>17.89</p>
+                            </td>
+                            <td>
+                                <p>10.41</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>
+                                    Амортизација на материјалните и
+                                    нематеријалните средс...
+                                </p>
+                            </td>
+                            <td>
+                                <p></p>
+                            </td>
+                            <td>
+                                <p>341,756,626</p>
+                            </td>
+                            <td>
+                                <p>284,108,054</p>
+                            </td>
+                            <td>
+                                <p>120.29</p>
+                            </td>
+                            <td>
+                                <p>8.84</p>
+                            </td>
+                            <td>
+                                <p>4.71</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Резервирање за трошоци и ризици</p>
+                            </td>
+                            <td>
+                                <p></p>
+                            </td>
+                            <td>
+                                <p>11,762,230</p>
+                            </td>
+                            <td>
+                                <p>157,958,759</p>
+                            </td>
+                            <td>
+                                <p>7.45</p>
+                            </td>
+                            <td>
+                                <p>0.30</p>
+                            </td>
+                            <td>
+                                <p>2.62</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>
+                                    Залихи на готови производи и недовршено
+                                    производство на почетокот на годината
+                                </p>
+                            </td>
+                            <td>
+                                <p></p>
+                            </td>
+                            <td>
+                                <p>459,870,695</p>
+                            </td>
+                            <td>
+                                <p>502,699,940</p>
+                            </td>
+                            <td>
+                                <p>91.48</p>
+                            </td>
+                            <td>
+                                <p>11.90</p>
+                            </td>
+                            <td>
+                                <p>8.33</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>
+                                    Залихи на готови производи и недовршено
+                                    производство на крајот на годината
+                                </p>
+                            </td>
+                            <td>
+                                <p></p>
+                            </td>
+                            <td>
+                                <p>395,368,495</p>
+                            </td>
+                            <td>
+                                <p>459,870,695</p>
+                            </td>
+                            <td>
+                                <p>85.97</p>
+                            </td>
+                            <td>
+                                <p>10.23</p>
+                            </td>
+                            <td>
+                                <p>7.62</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Останати расходи од работењето</p>
+                            </td>
+                            <td>
+                                <p></p>
+                            </td>
+                            <td>
+                                <p>291,783,838</p>
+                            </td>
+                            <td>
+                                <p>342,685,023</p>
+                            </td>
+                            <td>
+                                <p>85.15</p>
+                            </td>
+                            <td>
+                                <p>7.55</p>
+                            </td>
+                            <td>
+                                <p>5.68</p>
+                            </td>
+                        </tr>
+                        <tr class="has_border">
+                            <td>
+                                <p><span>Финансиски расходи</span></p>
+                            </td>
+                            <td>
+                                <p>2</p>
+                            </td>
+                            <td>
+                                <p>36,891,502</p>
+                            </td>
+                            <td>
+                                <p>24,133,840</p>
+                            </td>
+                            <td>
+                                <p>152.86</p>
+                            </td>
+                            <td>
+                                <p>0.95</p>
+                            </td>
+                            <td>
+                                <p>0.40</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>
+                                    Финансиски расходи од односи со поврзани
+                                    друштва
+                                </p>
+                            </td>
+                            <td>
+                                <p></p>
+                            </td>
+                            <td>
+                                <p>2,495</p>
+                            </td>
+                            <td>
+                                <p>0</p>
+                            </td>
+                            <td>
+                                <p>N/A</p>
+                            </td>
+                            <td>
+                                <p>0.00</p>
+                            </td>
+                            <td>
+                                <p>0.00</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>
+                                    Расходи по основ на камати и курсни разлики
+                                    од работе...
+                                </p>
+                            </td>
+                            <td>
+                                <p></p>
+                            </td>
+                            <td>
+                                <p>36,239,630</p>
+                            </td>
+                            <td>
+                                <p>23,995,420</p>
+                            </td>
+                            <td>
+                                <p>151.03</p>
+                            </td>
+                            <td>
+                                <p>0.94</p>
+                            </td>
+                            <td>
+                                <p>0.40</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>
+                                    Расходи од финансиски средства и вредносно
+                                    усогласув...
+                                </p>
+                            </td>
+                            <td>
+                                <p></p>
+                            </td>
+                            <td>
+                                <p>0</p>
+                            </td>
+                            <td>
+                                <p>0</p>
+                            </td>
+                            <td>
+                                <p>N/A</p>
+                            </td>
+                            <td>
+                                <p>0.00</p>
+                            </td>
+                            <td>
+                                <p>0.00</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Останати финансиски расходи</p>
+                            </td>
+                            <td>
+                                <p></p>
+                            </td>
+                            <td>
+                                <p>649,377</p>
+                            </td>
+                            <td>
+                                <p>138,420</p>
+                            </td>
+                            <td>
+                                <p>469.14</p>
+                            </td>
+                            <td>
+                                <p>0.02</p>
+                            </td>
+                            <td>
+                                <p>0.00</p>
+                            </td>
+                        </tr>
+                        <tr class="has_border">
+                            <td>
+                                <p>
+                                    <span>
+                                        Удел во загуба на придружените
+                                        друштва
+                                    </span>
+                                </p>
+                            </td>
+                            <td>
+                                <p>3</p>
+                            </td>
+                            <td>
+                                <p>0</p>
+                            </td>
+                            <td>
+                                <p>1,845,600</p>
+                            </td>
+                            <td>
+                                <p>0</p>
+                            </td>
+                            <td>
+                                <p>0.00</p>
+                            </td>
+                            <td>
+                                <p>0.03</p>
+                            </td>
+                        </tr>
+                        <tr class="has_border">
+                            <td>
+                                <p><span>Вкупно расходи</span></p>
+                            </td>
+                            <td>
+                                <p></p>
+                            </td>
+                            <td>
+                                <p>3,865,692,966</p>
+                            </td>
+                            <td>
+                                <p>6,036,004,579</p>
+                            </td>
+                            <td>
+                                <p>64.04</p>
+                            </td>
+                            <td>
+                                <p>100.00</p>
+                            </td>
+                            <td>
+                                <p>100.00</p>
+                            </td>
+                        </tr>
+                    </table>
+                    <table class="bilans_table margin_top">
+                        <tr class="gray">
+                            <td>
+                                <p><span>Категорија</span></p>
+                            </td>
+                            <td>
+                                <p></p>
+                            </td>
+                            <td>
+                                <p><span>2013</span></p>
+                            </td>
+                            <td>
+                                <p><span>2012</span></p>
+                            </td>
+                            <td>
+                                <p><span>Инд.</span></p>
+                            </td>
+                        </tr>
+                        <tr class="has_border">
+                            <td>
+                                <p><span>Добивка пред оданочување</span></p>
+                            </td>
+                            <td>
+                                <p>1</p>
+                            </td>
+                            <td>
+                                <p>215,153,069</p>
+                            </td>
+                            <td>
+                                <p>315,564,849</p>
+                            </td>
+                            <td>
+                                <p>68.18</p>
+                            </td>
+                        </tr>
+                        <tr class="has_border">
+                            <td>
+                                <p><span>Загуба пред оданочување</span></p>
+                            </td>
+                            <td>
+                                <p>2</p>
+                            </td>
+                            <td>
+                                <p>0</p>
+                            </td>
+                            <td>
+                                <p>0</p>
+                            </td>
+                            <td>
+                                <p>N/A</p>
+                            </td>
+                        </tr>
+                        <tr class="has_border">
+                            <td>
+                                <p><span>Данок на добивка</span></p>
+                            </td>
+                            <td>
+                                <p>3</p>
+                            </td>
+                            <td>
+                                <p>26,993,458</p>
+                            </td>
+                            <td>
+                                <p>3,882,506</p>
+                            </td>
+                            <td>
+                                <p>695.26</p>
+                            </td>
+                        </tr>
+                        <tr class="has_border">
+                            <td>
+                                <p>
+                                    <span>
+                                        Нето добивка во деловната
+                                        година
+                                    </span>
+                                </p>
+                            </td>
+                            <td>
+                                <p>4</p>
+                            </td>
+                            <td>
+                                <p>188,159,611</p>
+                            </td>
+                            <td>
+                                <p>311,682,343</p>
+                            </td>
+                            <td>
+                                <p>60.37</p>
+                            </td>
+                        </tr>
+                        <tr class="has_border">
+                            <td>
+                                <p>
+                                    <span>
+                                        Нето загуба во деловната
+                                        година
+                                    </span>
+                                </p>
+                            </td>
+                            <td>
+                                <p>5</p>
+                            </td>
+                            <td>
+                                <p>0</p>
+                            </td>
+                            <td>
+                                <p>0</p>
+                            </td>
+                            <td>
+                                <p>N/A</p>
+                            </td>
+                        </tr>
+                        <tr class="information">
+                            <td colspan="3">
+                                <p>
+                                    Data are shown in 1 MKD (1 EUR = 61.5 MKD
+                                    +/- 0.2) see <a href="www.nbrm.mk">www.nbrm.mk</a> for exact
+                                    exchange rates
+                                </p>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div>
+                <p>© CREDIT REPORT, all rights reserved</p>
+                <p>www.targetgroup.mk, tel/fax: +389 (2) 3117 - 100</p>
+            </div>
+            <div class="img_wrapper">
+                <img src="C:/Nix/Project/Bonitet.Web/Bonitet.Web//img/target_group.png">
+            </div>
+            <div class="pagination">
+                <p>{Page_number}12</p>
+            </div>
+        </div>
+    </div>
+    <div class="page">
+        <div class="header">
+            <div class="float_left">
+                <h2>Финансиски податоци</h2>
+                <h3>{naziv_firma}ГРАНИТ АД Скопје</h3>
+                <p class="date">Издаден {datum_izdavanje}22-Oct-15</p>
+            </div>
+            <div class="absolute_poglavje">
+                <p>Поглавје 6</p>
+            </div>
+        </div>
+        <div id="tenth_page_wrapper">
+            <div class="p_wrapper full">
+                <div class="p_wrapper_header">
+                    <h2>Индикатори</h2>
+                    <p class="black"></p>
+                </div>
+                <div class="content">
+                    <table class="bilans_table">
+                        <tr class="gray">
+                            <td>
+                                <p><span>Категорија</span></p>
+                            </td>
+                            <td>
+                                <p><span>2014</span></p>
+                            </td>
+                            <td>
+                                <p><span>2013</span></p>
+                            </td>
+                            <td>
+                                <p><span>Раст а.в.(%)</span></p>
+                            </td>
+                        </tr>
+                        <tr class="has_border">
+                            <td colspan="4">
+                                <p><span>Ликвидносни индикатори</span></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Работен капитал</p>
+                            </td>
+                            <td>
+                                <p>2,508,779,316</p>
+                            </td>
+                            <td>
+                                <p>1,912,892,710</p>
+                            </td>
+                            <td>
+                                <p>595,886,606 (0.31)</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Тековен показател</p>
+                            </td>
+                            <td>
+                                <p>1.64</p>
+                            </td>
+                            <td>
+                                <p>1.48</p>
+                            </td>
+                            <td>
+                                <p>0.16 (0.11)</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Брз показател</p>
+                            </td>
+                            <td>
+                                <p>1.39</p>
+                            </td>
+                            <td>
+                                <p>1.26</p>
+                            </td>
+                            <td>
+                                <p>0.13 (0.10)</p>
+                            </td>
+                        </tr>
+                        <tr class="has_border">
+                            <td colspan="4">
+                                <p><span>Показатели за обрт</span></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Обрт на средства</p>
+                            </td>
+                            <td>
+                                <p>33.45%</p>
+                            </td>
+                            <td>
+                                <p>67.80%</p>
+                            </td>
+                            <td>
+                                <p>-0.34 (-0.51)</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Денови на обрт на средства</p>
+                            </td>
+                            <td>
+                                <p>1,091</p>
+                            </td>
+                            <td>
+                                <p>538</p>
+                            </td>
+                            <td>
+                                <p>553 (1.03)</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Обрт на обврските</p>
+                            </td>
+                            <td>
+                                <p>1.78</p>
+                            </td>
+                            <td>
+                                <p>2.24</p>
+                            </td>
+                            <td>
+                                <p>-0.46 (-0.21)</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Просечни денови на плаќање на обврските</p>
+                            </td>
+                            <td>
+                                <p>205</p>
+                            </td>
+                            <td>
+                                <p>164</p>
+                            </td>
+                            <td>
+                                <p>41 (0.25)</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Обрт на побарувањата</p>
+                            </td>
+                            <td>
+                                <p>92.48%</p>
+                            </td>
+                            <td>
+                                <p>168.97%</p>
+                            </td>
+                            <td>
+                                <p>-0.76 (-0.45)</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Денови на обрт на побарувањата</p>
+                            </td>
+                            <td>
+                                <p>395</p>
+                            </td>
+                            <td>
+                                <p>216</p>
+                            </td>
+                            <td>
+                                <p>179 (0.83)</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Обрт на залихи</p>
+                            </td>
+                            <td>
+                                <p>249.38%</p>
+                            </td>
+                            <td>
+                                <p>504.65%</p>
+                            </td>
+                            <td>
+                                <p>-2.55 (-0.51)</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Денови на обрт на залихи</p>
+                            </td>
+                            <td>
+                                <p>146</p>
+                            </td>
+                            <td>
+                                <p>72</p>
+                            </td>
+                            <td>
+                                <p>74 (1.03)</p>
+                            </td>
+                        </tr>
+                        <tr class="has_border">
+                            <td colspan="4">
+                                <p><span>Профитабилност</span></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Поврат на капитал (ROE)</p>
+                            </td>
+                            <td>
+                                <p>4.35%</p>
+                            </td>
+                            <td>
+                                <p>7.42%</p>
+                            </td>
+                            <td>
+                                <p>-0.03 (-0.41)</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Поврат на средства (ROA)</p>
+                            </td>
+                            <td>
+                                <p>1.99%</p>
+                            </td>
+                            <td>
+                                <p>3.58%</p>
+                            </td>
+                            <td>
+                                <p>-0.02 (-0.44)</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Нето профитна маргина</p>
+                            </td>
+                            <td>
+                                <p>6.20%</p>
+                            </td>
+                            <td>
+                                <p>5.29%</p>
+                            </td>
+                            <td>
+                                <p>0.01 (0.17)</p>
+                            </td>
+                        </tr>
+                        <tr class="has_border">
+                            <td colspan="4">
+                                <p><span>Показатели за задолженост</span></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Финансиски левериџ</p>
+                            </td>
+                            <td>
+                                <p>0.97</p>
+                            </td>
+                            <td>
+                                <p>1.01</p>
+                            </td>
+                            <td>
+                                <p>-0.04 (-0.04)</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Коефициент на задолженост</p>
+                            </td>
+                            <td>
+                                <p>0.44</p>
+                            </td>
+                            <td>
+                                <p>0.49</p>
+                            </td>
+                            <td>
+                                <p>-0.05 (-0.10)</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Вкупни обврски / EBITDA</p>
+                            </td>
+                            <td>
+                                <p>9.64</p>
+                            </td>
+                            <td>
+                                <p>7.94</p>
+                            </td>
+                            <td>
+                                <p>1.70 (0.21)</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>
+                                    Покриеност на сервисирање на долгови
+                                    (DSCR)
+                                </p>
+                            </td>
+                            <td>
+                                <p>4.54</p>
+                            </td>
+                            <td>
+                                <p>6.14</p>
+                            </td>
+                            <td>
+                                <p>-1.60 (-0.26)</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Покриеност на камати</p>
+                            </td>
+                            <td>
+                                <p>4.89</p>
+                            </td>
+                            <td>
+                                <p>11.56</p>
+                            </td>
+                            <td>
+                                <p>-6.67 (-0.58)</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Краткорочни кредити / Продажба</p>
+                            </td>
+                            <td>
+                                <p>4.26%</p>
+                            </td>
+                            <td>
+                                <p>3.20%</p>
+                            </td>
+                            <td>
+                                <p>0.01 (0.33)</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Тековни обврски / Вкупна продажба</p>
+                            </td>
+                            <td>
+                                <p>129.96%</p>
+                            </td>
+                            <td>
+                                <p>67.51%</p>
+                            </td>
+                            <td>
+                                <p>0.62 (0.93)</p>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div>
+                <p>© CREDIT REPORT, all rights reserved</p>
+                <p>www.targetgroup.mk, tel/fax: +389 (2) 3117 - 100</p>
+            </div>
+            <div class="img_wrapper">
+                <img src="C:/Nix/Project/Bonitet.Web/Bonitet.Web//img/target_group.png">
+            </div>
+            <div class="pagination">
+                <p>{Page_number}13</p>
+            </div>
+        </div>
+    </div>
+    <div class="page">
+        <div class="header">
+            <div class="float_left">
+                <h2>Финансиски податоци</h2>
+                <h3>{naziv_firma}ГРАНИТ АД Скопје</h3>
+                <p class="date">Издаден {datum_izdavanje}22-Oct-15</p>
+            </div>
+            <div class="absolute_poglavje">
+                <p>Поглавје 6</p>
+            </div>
+        </div>
+        <div id="eleventh_page_wrapper">
+            <div class="p_wrapper full">
+                <div class="p_wrapper_header">
+                    <h2>Готовински текови</h2>
+                    <p class="black"></p>
+                </div>
+                <div class="content">
+                    <table class="bilans_table">
+                        <tr class="gray">
+                            <td>
+                                <p><span>Категорија</span></p>
+                            </td>
+                            <td>
+                                <p><span>2014</span></p>
+                            </td>
+                        </tr>
+                        <tr class="has_border">
+                            <td colspan="2">
+                                <p><span>Опис</span></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Нето профит (добивка) по оданочување</p>
+                            </td>
+                            <td>
+                                <p>0</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Загуба по оданочување</p>
+                            </td>
+                            <td>
+                                <p>0</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Амортизација</p>
+                            </td>
+                            <td>
+                                <p>0</p>
+                            </td>
+                        </tr>
+                        <tr class="has_border">
+                            <td colspan="2">
+                                <p>
+                                    <span>
+                                        Готовински текови од оперативни
+                                        (деловни) активности
+                                    </span>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>
+                                    Приливи на готовината од деловни
+                                    активности
+                                </p>
+                            </td>
+                            <td>
+                                <p>0</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>
+                                    Одливи на готовината од деловни
+                                    активности
+                                </p>
+                            </td>
+                            <td>
+                                <p>0</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>
+                                    Нето приливи на готовината од деловни
+                                    активности
+                                </p>
+                            </td>
+                            <td>
+                                <p>0</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>
+                                    Нето одливи на готовината од деловни
+                                    активности
+                                </p>
+                            </td>
+                            <td>
+                                <p>0</p>
+                            </td>
+                        </tr>
+                        <tr class="has_border">
+                            <td colspan="2">
+                                <p>
+                                    <span>
+                                        Готовински текови од инвестициони
+                                        активности
+                                    </span>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>
+                                    Приливи на готовината од инвестициони
+                                    активности и пласмани
+                                </p>
+                            </td>
+                            <td>
+                                <p>0</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>
+                                    Одливи на готовината од инвестициони
+                                    активности и пласмани
+                                </p>
+                            </td>
+                            <td>
+                                <p>0</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>
+                                    Нето приливи на готовината од инвестициони
+                                    активности и пласмани активности
+                                </p>
+                            </td>
+                            <td>
+                                <p>0</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>
+                                    Нето одливи на готовината од инвестициони
+                                    активности и пласмани
+                                </p>
+                            </td>
+                            <td>
+                                <p>0</p>
+                            </td>
+                        </tr>
+                        <tr class="has_border">
+                            <td colspan="2">
+                                <p>
+                                    <span>
+                                        Готовински текови од финансиски
+                                        активности
+                                    </span>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>
+                                    Приливи на готовината од финансиски
+                                    активности
+                                </p>
+                            </td>
+                            <td>
+                                <p>0</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>
+                                    Одливи на готовината од финансиски
+                                    активности
+                                </p>
+                            </td>
+                            <td>
+                                <p>0</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>
+                                    Нето приливи на готовината од финансиски
+                                    активности
+                                </p>
+                            </td>
+                            <td>
+                                <p>0</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>
+                                    Нето одливи на готовината од финансиски
+                                    активности
+                                </p>
+                            </td>
+                            <td>
+                                <p>0</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Вкупно приливи на готовината</p>
+                            </td>
+                            <td>
+                                <p>0</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Вкупно одливи на готовината</p>
+                            </td>
+                            <td>
+                                <p>0</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Вкупно нето приливи на готовината</p>
+                            </td>
+                            <td>
+                                <p>0</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Вкупно нето одливи на готовината</p>
+                            </td>
+                            <td>
+                                <p>0</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Парични средства на почеток на годината</p>
+                            </td>
+                            <td>
+                                <p>0</p>
+                            </td>
+                        </tr>
+                        <tr class="has_border">
+                            <td>
+                                <p>Парични средства на крајот на годината</p>
+                            </td>
+                            <td>
+                                <p>0</p>
+                            </td>
+                        </tr>
+                        <tr class="information">
+                            <td colspan="3">
+                                <p>
+                                    Data are shown in 1 MKD (1 EUR = 61.5 MKD
+                                    +/- 0.2) see <a href="www.nbrm.mk">www.nbrm.mk</a> for exact
+                                    exchange rates
+                                </p>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div>
+                <p>© CREDIT REPORT, all rights reserved</p>
+                <p>www.targetgroup.mk, tel/fax: +389 (2) 3117 - 100</p>
+            </div>
+            <div class="img_wrapper">
+                <img src="C:/Nix/Project/Bonitet.Web/Bonitet.Web//img/target_group.png">
+            </div>
+            <div class="pagination">
+                <p>{Page_number}14</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

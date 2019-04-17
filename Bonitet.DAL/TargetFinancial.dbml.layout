@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 15, 15.25" name="TargetFinancial">
+  <DataContextMoniker Name="/TargetFinancialDataContext" />
+  <nestedChildShapes>
+    <classShape Id="7a5f9686-6319-4e3e-9c07-7601fd76a2c1" absoluteBounds="0.75, 10.75, 2, 1.2605004882812487">
+      <DataClassMoniker Name="/TargetFinancialDataContext/AdminUser" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5e4c1882-1edc-46de-9ad4-f2de0c83e1d0" absoluteBounds="0.765, 11.21, 1.9700000000000002, 0.70050048828125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="85a83692-a0d4-4ac0-a76b-aa2414cc9fdd" absoluteBounds="11.5, 10.125, 2, 1.4248478190104166">
+      <DataClassMoniker Name="/TargetFinancialDataContext/XmlResponse" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ab2d7c54-7565-481a-92a9-f62e8af2fc66" absoluteBounds="11.515, 10.585, 1.9700000000000002, 0.86484781901041674" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7586d31d-a5d4-488a-82ab-290be0593ac8" absoluteBounds="3.75, 10.75, 2, 4.2187524414062487">
+      <DataClassMoniker Name="/TargetFinancialDataContext/CollectedCompanyData" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c1ac3a7d-48f8-4b4c-952c-3098c313e49c" absoluteBounds="3.765, 11.21, 1.9700000000000002, 3.65875244140625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3b8e720e-e941-42d7-a325-810df935cd0f" absoluteBounds="6.75, 5.875, 2, 1.4248478190104166">
+      <DataClassMoniker Name="/TargetFinancialDataContext/Company" />
+      <nestedChildShapes>
+        <elementListCompartment Id="30dddcab-d8c5-41a1-b2d9-70ee54614e3a" absoluteBounds="6.765, 6.335, 1.9700000000000002, 0.86484781901041674" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="30d81edf-38e0-4ca0-b61b-dc5511c7a9f7" absoluteBounds="12.75, 3.75, 2, 1.5891951497395827">
+      <DataClassMoniker Name="/TargetFinancialDataContext/CompanyValue" />
+      <nestedChildShapes>
+        <elementListCompartment Id="df825ed5-8cc5-40b0-bc86-50b851dd03b2" absoluteBounds="12.765, 4.21, 1.9700000000000002, 1.0291951497395833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="225c8adf-0982-43f6-966a-b1f8b543990b" absoluteBounds="12.75, 6.75, 2, 1.5891951497395835">
+      <DataClassMoniker Name="/TargetFinancialDataContext/CompanyValuesBak" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a47276cf-737d-44a6-a919-13b6efaabf88" absoluteBounds="12.765, 7.21, 1.9700000000000002, 1.0291951497395833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="03b3d8b0-0f8f-4cf8-b4d8-1521482ad061" absoluteBounds="9.5, 5, 2, 1.2605004882812505">
+      <DataClassMoniker Name="/TargetFinancialDataContext/CompanyYear" />
+      <nestedChildShapes>
+        <elementListCompartment Id="47e674ca-2673-4763-98a0-80e2a5657959" absoluteBounds="9.515, 5.46, 1.9700000000000002, 0.70050048828125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4d64ce1e-3795-4c95-9689-ce8bad7aa832" absoluteBounds="9.5, 7, 2, 1.2605004882812505">
+      <DataClassMoniker Name="/TargetFinancialDataContext/CompanyYearsBak" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ccd54024-839d-459b-9c8a-65ea7fddc93e" absoluteBounds="9.515, 7.46, 1.9700000000000002, 0.70050048828125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f1a30cce-9b31-4a32-b175-3d7762d8cc30" absoluteBounds="8.75, 9.875, 2, 1.9178898111979166">
+      <DataClassMoniker Name="/TargetFinancialDataContext/CRMResponse" />
+      <nestedChildShapes>
+        <elementListCompartment Id="94811c56-0df6-4894-8f89-794c370ddde3" absoluteBounds="8.765, 10.335, 1.9700000000000002, 1.3578898111979165" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="18967ab8-fd29-44f7-96a9-8b06b3fb3e9f" absoluteBounds="6.75, 12.75, 2, 1.2605004882812487">
+      <DataClassMoniker Name="/TargetFinancialDataContext/GlobalConfig" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ac71fab2-7711-4c79-886f-7a5939a29bc6" absoluteBounds="6.765, 13.21, 1.9700000000000002, 0.70050048828125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7934170e-2290-4cf2-a84d-f21054768974" absoluteBounds="3.5, 1.125, 2, 2.5752791341145835">
+      <DataClassMoniker Name="/TargetFinancialDataContext/PrepayPack" />
+      <nestedChildShapes>
+        <elementListCompartment Id="11b3e18d-40c7-471b-9f72-71635dea3318" absoluteBounds="3.515, 1.585, 1.9700000000000002, 2.015279134114583" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1a796ca6-c22c-4183-9bd2-ecfe6d0cac50" absoluteBounds="6.25, 8.5, 2, 1.2605004882812487">
+      <DataClassMoniker Name="/TargetFinancialDataContext/ReportLog" />
+      <nestedChildShapes>
+        <elementListCompartment Id="73ec36c3-e15e-44a1-a113-114fbd20785d" absoluteBounds="6.265, 8.96, 1.9700000000000002, 0.70050048828125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="971e6220-91be-48c8-86ef-214d96abeef9" absoluteBounds="3.5, 4.5, 2, 2.5752791341145826">
+      <DataClassMoniker Name="/TargetFinancialDataContext/ReportRequest" />
+      <nestedChildShapes>
+        <elementListCompartment Id="37150f75-979b-41fe-963a-fc3b0d6ff198" absoluteBounds="3.515, 4.96, 1.9700000000000002, 2.015279134114583" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="cbe785c2-d26d-4299-9331-6b0bd1234a3b" absoluteBounds="3.5, 8.25, 2, 1.7535424804687487">
+      <DataClassMoniker Name="/TargetFinancialDataContext/Report" />
+      <nestedChildShapes>
+        <elementListCompartment Id="52d4ab23-50bb-451c-926f-bcaf66dea27b" absoluteBounds="3.515, 8.71, 1.9700000000000002, 1.19354248046875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="034da5f2-bdd6-4e9b-b600-f832d37170ff" absoluteBounds="11.5, 0.875, 2, 1.9178898111979166">
+      <DataClassMoniker Name="/TargetFinancialDataContext/ReportValue" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5f2b55d1-924b-4ff7-a590-474bef2aa8b7" absoluteBounds="11.515, 1.335, 1.9700000000000002, 1.3578898111979165" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8a347bf0-eaf9-43a3-88c0-4294ddf6fba7" absoluteBounds="6.25, 2.25, 2, 1.7535424804687496">
+      <DataClassMoniker Name="/TargetFinancialDataContext/UserReport" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b5adbd10-3847-4f78-9e5d-0d7d6716242c" absoluteBounds="6.265, 2.71, 1.9700000000000002, 1.19354248046875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="dbc54625-4a25-4d2a-8c27-884e80c44c57" absoluteBounds="0.75, 3.125, 2, 1.9178898111979166">
+      <DataClassMoniker Name="/TargetFinancialDataContext/User" />
+      <nestedChildShapes>
+        <elementListCompartment Id="96efccf1-44e5-42a8-9f55-e45dcf04c91d" absoluteBounds="0.765, 3.585, 1.9700000000000002, 1.3578898111979165" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b5d2034f-1039-44c2-9578-55c366402898" absoluteBounds="8.75, 1.125, 2, 1.4248478190104166">
+      <DataClassMoniker Name="/TargetFinancialDataContext/Value" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e67e8949-a430-47a4-bee5-ac839fbe88fe" absoluteBounds="8.765, 1.585, 1.9700000000000002, 0.86484781901041674" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(8.75 : 6.06775024414063); (9.5 : 6.06775024414063)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/TargetFinancialDataContext/Company/Company_CompanyYear" />
+      <nodes>
+        <classShapeMoniker Id="3b8e720e-e941-42d7-a325-810df935cd0f" />
+        <classShapeMoniker Id="03b3d8b0-0f8f-4cf8-b4d8-1521482ad061" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.75 : 7.14992390950521); (9.5 : 7.14992390950521)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/TargetFinancialDataContext/Company/Company_CompanyYearsBak" />
+      <nodes>
+        <classShapeMoniker Id="3b8e720e-e941-42d7-a325-810df935cd0f" />
+        <classShapeMoniker Id="4d64ce1e-3795-4c95-9689-ce8bad7aa832" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(10.75 : 10.8374239095052); (11.5 : 10.8374239095052)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/TargetFinancialDataContext/CRMResponse/CRMResponse_XmlResponse" />
+      <nodes>
+        <classShapeMoniker Id="f1a30cce-9b31-4a32-b175-3d7762d8cc30" />
+        <classShapeMoniker Id="85a83692-a0d4-4ac0-a76b-aa2414cc9fdd" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 9.13025024414062); (6.25 : 9.13025024414062)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/TargetFinancialDataContext/Report/Report_ReportLog" />
+      <nodes>
+        <classShapeMoniker Id="cbe785c2-d26d-4299-9331-6b0bd1234a3b" />
+        <classShapeMoniker Id="1a796ca6-c22c-4183-9bd2-ecfe6d0cac50" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 2.93799141748047); (6.25 : 2.93799141748047)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/TargetFinancialDataContext/PrepayPack/PrepayPack_UserReport" />
+      <nodes>
+        <classShapeMoniker Id="7934170e-2290-4cf2-a84d-f21054768974" />
+        <classShapeMoniker Id="8a347bf0-eaf9-43a3-88c0-4294ddf6fba7" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 8.25); (5.875 : 7.875); (5.875 : 3.52059302376302); (6.25 : 3.52059302376302)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/TargetFinancialDataContext/Report/Report_UserReport" />
+      <nodes>
+        <classShapeMoniker Id="cbe785c2-d26d-4299-9331-6b0bd1234a3b" />
+        <classShapeMoniker Id="8a347bf0-eaf9-43a3-88c0-4294ddf6fba7" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 3.41263956705729); (3.5 : 3.41263956705729)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/TargetFinancialDataContext/User/User_PrepayPack" />
+      <nodes>
+        <classShapeMoniker Id="dbc54625-4a25-4d2a-8c27-884e80c44c57" />
+        <classShapeMoniker Id="7934170e-2290-4cf2-a84d-f21054768974" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 4.77144490559896); (3.5 : 4.77144490559896)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/TargetFinancialDataContext/User/User_ReportRequest" />
+      <nodes>
+        <classShapeMoniker Id="dbc54625-4a25-4d2a-8c27-884e80c44c57" />
+        <classShapeMoniker Id="971e6220-91be-48c8-86ef-214d96abeef9" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 3.88316080729167); (5.79166666666667 : 3.88316080729167 : JumpStart); (5.95833333333333 : 3.88316080729167 : JumpEnd); (6.25 : 3.88316080729167)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/TargetFinancialDataContext/User/User_UserReport" />
+      <nodes>
+        <classShapeMoniker Id="dbc54625-4a25-4d2a-8c27-884e80c44c57" />
+        <classShapeMoniker Id="8a347bf0-eaf9-43a3-88c0-4294ddf6fba7" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(10.75 : 1.83742390950521); (11.5 : 1.83742390950521)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/TargetFinancialDataContext/Value/Value_ReportValue" />
+      <nodes>
+        <classShapeMoniker Id="b5d2034f-1039-44c2-9578-55c366402898" />
+        <classShapeMoniker Id="034da5f2-bdd6-4e9b-b600-f832d37170ff" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="4b647cf8-6f10-4c2d-89d6-9af8923cff00" absoluteBounds="4.75, 0.5, 2, 1.9178898111979166">
+      <DataClassMoniker Name="/TargetFinancialDataContext/ReportValuesBackup" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2bbfd1e9-149f-42a1-a862-910f38dfde83" absoluteBounds="4.765, 0.96, 1.9700000000000002, 1.3578898111979165" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(8.75 : 1.65625); (6.75 : 1.65625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/TargetFinancialDataContext/Value/Value_ReportValuesBackup" />
+      <nodes>
+        <classShapeMoniker Id="b5d2034f-1039-44c2-9578-55c366402898" />
+        <classShapeMoniker Id="4b647cf8-6f10-4c2d-89d6-9af8923cff00" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

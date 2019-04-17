@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://eboniteti.mk/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://eboniteti.mk/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://eboniteti.mk/">
+      <s:element name="GetResults">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="embs" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="UserID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="ticket" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetResultsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetResultsResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetResultsForReport">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="embs" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="year" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="force_crm" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetResultsForReportResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetResultsForReportResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetResultsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetResults" />
+  </wsdl:message>
+  <wsdl:message name="GetResultsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetResultsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetResultsForReportSoapIn">
+    <wsdl:part name="parameters" element="tns:GetResultsForReport" />
+  </wsdl:message>
+  <wsdl:message name="GetResultsForReportSoapOut">
+    <wsdl:part name="parameters" element="tns:GetResultsForReportResponse" />
+  </wsdl:message>
+  <wsdl:portType name="CRMServiceProxySoap">
+    <wsdl:operation name="GetResults">
+      <wsdl:input message="tns:GetResultsSoapIn" />
+      <wsdl:output message="tns:GetResultsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetResultsForReport">
+      <wsdl:input message="tns:GetResultsForReportSoapIn" />
+      <wsdl:output message="tns:GetResultsForReportSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CRMServiceProxySoap" type="tns:CRMServiceProxySoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetResults">
+      <soap:operation soapAction="http://eboniteti.mk/GetResults" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetResultsForReport">
+      <soap:operation soapAction="http://eboniteti.mk/GetResultsForReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="CRMServiceProxySoap12" type="tns:CRMServiceProxySoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetResults">
+      <soap12:operation soapAction="http://eboniteti.mk/GetResults" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetResultsForReport">
+      <soap12:operation soapAction="http://eboniteti.mk/GetResultsForReport" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CRMServiceProxy">
+    <wsdl:port name="CRMServiceProxySoap" binding="tns:CRMServiceProxySoap">
+      <soap:address location="http://79.125.192.45:9000/CRMServiceProxy.asmx" />
+    </wsdl:port>
+    <wsdl:port name="CRMServiceProxySoap12" binding="tns:CRMServiceProxySoap12">
+      <soap12:address location="http://79.125.192.45:9000/CRMServiceProxy.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

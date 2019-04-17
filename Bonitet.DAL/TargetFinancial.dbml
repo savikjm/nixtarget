@@ -1,0 +1,242 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="TargetFinancial" Class="TargetFinancialDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.\SQL2008R2;Initial Catalog=TargetFinancial;Persist Security Info=True;User ID=TargetBM" SettingsObjectName="Bonitet.DAL.Properties.Settings" SettingsPropertyName="TargetFinancialConnectionString2" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.AdminUsers" Member="AdminUsers">
+    <Type Name="AdminUser">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Username" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="Password" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.XmlResponses" Member="XmlResponses">
+    <Type Name="XmlResponse">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Text" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="CRMResponseID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Part" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="CRMResponse_XmlResponse" Member="CRMResponse" ThisKey="CRMResponseID" OtherKey="ID" Type="CRMResponse" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CollectedCompanyData" Member="CollectedCompanyDatas">
+    <Type Name="CollectedCompanyData">
+      <Column Name="CompanyID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Year" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="v301" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="v302" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="v303" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="v304" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="v305" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="v306" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="v307" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="v308" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="v309" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="v310" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="v311" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="v312" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="v313" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="v314" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="v315" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="v316" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="v317" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="v318" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Type" Type="System.Double" DbType="Float" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Company" Member="Companies">
+    <Type Name="Company">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="EMBS" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="Mesto" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Association Name="Company_CompanyYear" Member="CompanyYears" ThisKey="ID" OtherKey="CompanyID" Type="CompanyYear" />
+      <Association Name="Company_CompanyYearsBak" Member="CompanyYearsBaks" ThisKey="ID" OtherKey="CompanyID" Type="CompanyYearsBak" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CompanyValues" Member="CompanyValues">
+    <Type Name="CompanyValue">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CompanyID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ValueID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Value" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="YearID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CompanyValuesBak" Member="CompanyValuesBaks">
+    <Type Name="CompanyValuesBak">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CompanyID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ValueID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Value" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="YearID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CompanyYears" Member="CompanyYears">
+    <Type Name="CompanyYear">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Year" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CompanyID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Company_CompanyYear" Member="Company" ThisKey="CompanyID" OtherKey="ID" Type="Company" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CompanyYearsBak" Member="CompanyYearsBaks">
+    <Type Name="CompanyYearsBak">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Year" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CompanyID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Company_CompanyYearsBak" Member="Company" ThisKey="CompanyID" OtherKey="ID" Type="Company" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CRMResponses" Member="CRMResponses">
+    <Type Name="CRMResponse">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CompanyID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ReportID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Year" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="XmlResponse" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Type" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ResponseData" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="CRMResponse_XmlResponse" Member="XmlResponses" ThisKey="ID" OtherKey="CRMResponseID" Type="XmlResponse" />
+    </Type>
+  </Table>
+  <Table Name="dbo.GlobalConfig" Member="GlobalConfigs">
+    <Type Name="GlobalConfig">
+      <Column Name="GlobalYear" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ForcedYear" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PrepayPacks" Member="PrepayPacks">
+    <Type Name="PrepayPack">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DateCreated" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="DateStart" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="DateEnd" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Pack" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Used" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="UserID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Comment" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="Active" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="PackType" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IsPostPaid" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="PrepayPack_UserReport" Member="UserReports" ThisKey="ID" OtherKey="PackID" Type="UserReport" />
+      <Association Name="User_PrepayPack" Member="User" ThisKey="UserID" OtherKey="ID" Type="User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ReportLogs" Member="ReportLogs">
+    <Type Name="ReportLog">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ReportID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DownloadDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="Report_ReportLog" Member="Report" ThisKey="ReportID" OtherKey="ID" Type="Report" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ReportRequests" Member="ReportRequests">
+    <Type Name="ReportRequest">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CreatedOn" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="UserID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ReportType" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CompanyID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Year" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NoData" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="EMBS" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Deleted" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="MailSent" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Paid" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="User_ReportRequest" Member="User" ThisKey="UserID" OtherKey="ID" Type="User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Reports" Member="Reports">
+    <Type Name="Report">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UID" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="ReportType" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Path" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="CompanyID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Year" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Report_ReportLog" Member="ReportLogs" ThisKey="ID" OtherKey="ReportID" Type="ReportLog" />
+      <Association Name="Report_UserReport" Member="UserReports" ThisKey="ID" OtherKey="ReportID" Type="UserReport" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ReportValues" Member="ReportValues">
+    <Type Name="ReportValue">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CompanyID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ValueID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="YearID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Value" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PercentValue" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Ind" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="Value_ReportValue" Member="Value1" ThisKey="ValueID" OtherKey="ID" Type="Value" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.UserReports" Member="UserReports">
+    <Type Name="UserReport">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ReportID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Downloads" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DateCreated" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="PackID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="PrepayPack_UserReport" Member="PrepayPack" ThisKey="PackID" OtherKey="ID" Type="PrepayPack" IsForeignKey="true" />
+      <Association Name="Report_UserReport" Member="Report" ThisKey="ReportID" OtherKey="ID" Type="Report" IsForeignKey="true" />
+      <Association Name="User_UserReport" Member="User" ThisKey="UserID" OtherKey="ID" Type="User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Users" Member="Users">
+    <Type Name="User">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Username" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="Password" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="EMBS" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="IsActive" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="ActivationCode" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Association Name="User_PrepayPack" Member="PrepayPacks" ThisKey="ID" OtherKey="UserID" Type="PrepayPack" />
+      <Association Name="User_ReportRequest" Member="ReportRequests" ThisKey="ID" OtherKey="UserID" Type="ReportRequest" />
+      <Association Name="User_UserReport" Member="UserReports" ThisKey="ID" OtherKey="UserID" Type="UserReport" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[Values]" Member="Values">
+    <Type Name="Value">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="Type" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Association Name="Value_ReportValue" Member="ReportValues" ThisKey="ID" OtherKey="ValueID" Type="ReportValue" />
+      <Association Name="Value_ReportValuesBackup" Member="ReportValuesBackups" ThisKey="ID" OtherKey="ValueID" Type="ReportValuesBackup" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ReportValuesBackup" Member="ReportValuesBackups">
+    <Type Name="ReportValuesBackup">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CompanyID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ValueID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="YearID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Value" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PercentValue" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Ind" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="Value_ReportValuesBackup" Member="Value1" ThisKey="ValueID" OtherKey="ID" Type="Value" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.GetReportRequests" Method="GetReportRequests">
+    <ElementType Name="GetReportRequestsResult">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedOn" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="CompanyID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="EMBS" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Year" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NoData" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="ReportType" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="UserID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Deleted" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="MailSent" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Paid" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ReportTypeString" Type="System.String" DbType="NVarChar(18)" CanBeNull="true" />
+      <Column Name="SendMail" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="StatusText" Type="System.String" DbType="VarChar(16)" CanBeNull="true" />
+      <Column Name="CompanyName" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="Username" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="Filter" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+</Database>

@@ -1,0 +1,190 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style> 
+        body {
+            height: 1470px;
+            width: 1040px;
+            padding: 0;
+            margin: 0 auto;
+            font-family: Calibri;
+            font-size: 16px;
+        }
+        h1, p, span {
+            margin:0;
+            padding:0;
+        
+        }
+
+        .header_spacer {
+            width:100%;
+            height:200px;
+            float:left;
+        }
+        
+        .header {
+            width: 90%;
+            height: 200px;
+            float: left;
+            padding: 0 5%;
+            margin-bottom:100px;
+        }
+        .header #header_target_logo_container {
+            float: left;
+            width: 50%;
+            text-align: left;
+        }
+        .header .target_logo {
+            float: left;
+            width: auto;
+            margin-top: 10px;
+            height: 150px;
+        }
+        .header .target_info {
+            float: left;
+            width: 50%;
+            text-align: left;
+        }
+
+        .header .target_info p {
+            color: #808080;
+            font-size: 16px;
+            padding: 0;
+            margin: 0;
+            padding-left:10%;
+        }
+
+        .header .target_info .red_uppercase {
+            font-weight: bold;
+            color: red;
+            text-transform: uppercase;
+            padding: 0;
+            margin: 0;
+            padding-left: 10%;
+            font-size:25px;
+        }
+        .header .target_info .red_uppercase {
+            text-transform: none;
+        }
+
+        .header .target_info .blue_underline {
+            text-decoration:underline;
+            color:blue;
+        }
+        
+         .content {
+            height: 470px;
+            width: 90%;
+            float: left;
+            padding: 0 5%;
+        }
+        .content > * {
+            padding-left:40px;
+            font-size:20px;
+            padding-right:50px;
+        }
+        .content h1 {
+            font-size:40px;
+            margin-bottom:40px;
+        }
+        .content .bold {
+            font-weight:bold;
+            display:inline-block;
+            width:100px;
+            margin-bottom:10px;
+        }
+        .content .border {
+            width: 80%;
+            height: 1px;
+            float: left;
+            background-color: #000;
+            margin-left: 40px;
+            margin-top: 20px;
+        }
+        .footer_spacer {
+            width:100%;
+            height:400px;
+            float:left;
+        }
+        .footer {
+            width: 90%;
+            height: 100px;
+            float: left;
+            padding: 0 5%;
+            overflow: hidden;
+        }
+        .footer > div {
+            width:33%;
+            height:100%;
+            float:left;
+        }
+        .footer #biznis_mreza_logo_container {
+            margin-top:23px;
+        }
+        .footer #target_logo_container {
+            margin-top: 10px;
+            text-align: center;
+        }
+        .footer #bonitet_logo_container {
+            margin-top: 25px;
+            text-align: right;
+        } 
+        .footer .biznis_mreza_logo {
+            height: 55px;
+            width: auto;
+        }
+        .footer .target_logo {
+            height: 80px;
+            width: auto;
+        }
+        .footer .bonitet_logo {
+            height: 50px;
+            width: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="header_spacer"></div>
+    <div class="header">
+        <div id="header_target_logo_container">
+            <img src="{AbsoluteUrl}\\target_logo.png" class="target_logo" />
+        </div>
+        <div class="target_info">
+            <p class="red_uppercase">Таргет Груп ДОО <span>Скопје</span></p>
+            <p>Ул. 9-ти Мај 36/4-15</p>
+            <p>1000 Скопје, Р.Македонија</p>
+            <p>Тел/Факс: +389 (2) 3117 100</p>
+            <p>Е-маил: <span class="blue_underline">info@targetgroup.mk</span></p>
+            <p><span class="blue_underline">www.targetgroup.mk</span></p>
+            <p><span class="blue_underline">www.biznismreza.mk</span></p>
+            <p><span class="blue_underline">www.eboniteti.mk</span></p>
+            <p><span class="blue_underline">www.bonitet.mk</span></p>
+        </div>
+    </div>
+    <div class="content">
+        <h1>Извештај за блокада на сметка</h1>
+        <p><span class="bold">ЕМБС:</span><span>{EMBS}</span></p>
+        <p><span class="bold">НАЗИВ:</span><span>{naziv}</span></p>
+        <p><span class="bold">Адреса:</span><span>{adresa}</span></p>
+        <p><span class="bold">Датум:</span><span>{datum}</span></p>
+        <p><span class="bold">Статус:</span><span>{status}</span></p>
+        <p><span class="bold">Коментар:</span><span>{komentar}</span></p>
+        <div class="border"></div>
+    </div>
+    <div class="footer_spacer"></div>
+    <div class="footer">
+        <div id="biznis_mreza_logo_container">
+            <img src="{AbsoluteUrl}\\logoBiznis.png" class="biznis_mreza_logo" />
+        </div>
+        <div id="target_logo_container">
+            <img src="{AbsoluteUrl}\\target_logo.png" class="target_logo" />
+        </div>
+        <div id="bonitet_logo_container">
+            <img src="{AbsoluteUrl}\\bonitet_mk.png" class="bonitet_logo" />
+        </div>
+    </div>
+</body>
+</html>

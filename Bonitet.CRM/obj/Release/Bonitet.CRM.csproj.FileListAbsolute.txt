@@ -1,0 +1,8 @@
+C:\Nix\Project\Bonitet.CRM\bin\Release\Bonitet.CRM.dll.config
+C:\Nix\Project\Bonitet.CRM\bin\Release\Bonitet.CRM.dll
+C:\Nix\Project\Bonitet.CRM\bin\Release\Bonitet.CRM.XmlSerializers.dll
+C:\Nix\Project\Bonitet.CRM\bin\Release\Bonitet.CRM.pdb
+C:\Nix\Project\Bonitet.CRM\obj\Release\Bonitet.CRM.csprojResolveAssemblyReference.cache
+C:\Nix\Project\Bonitet.CRM\obj\Release\Bonitet.CRM.dll
+C:\Nix\Project\Bonitet.CRM\obj\Release\Bonitet.CRM.pdb
+C:\Nix\Project\Bonitet.CRM\obj\Release\Bonitet.CRM.XmlSerializers.dll

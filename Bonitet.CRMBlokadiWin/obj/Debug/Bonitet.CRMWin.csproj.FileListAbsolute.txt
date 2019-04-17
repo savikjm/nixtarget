@@ -1,0 +1,11 @@
+C:\Nix\Project\Bonitet.CRMWin\bin\Debug\Bonitet.CRMWin.exe.config
+C:\Nix\Project\Bonitet.CRMWin\bin\Debug\Bonitet.CRMWin.exe
+C:\Nix\Project\Bonitet.CRMWin\bin\Debug\Bonitet.CRMWin.pdb
+C:\Nix\Project\Bonitet.CRMWin\bin\Debug\Bonitet.CRM.dll
+C:\Nix\Project\Bonitet.CRMWin\bin\Debug\Bonitet.CRM.pdb
+C:\Nix\Project\Bonitet.CRMWin\obj\Debug\Bonitet.CRMWin.csprojResolveAssemblyReference.cache
+C:\Nix\Project\Bonitet.CRMWin\obj\Debug\Bonitet.CRMWin.Form1.resources
+C:\Nix\Project\Bonitet.CRMWin\obj\Debug\Bonitet.CRMWin.Properties.Resources.resources
+C:\Nix\Project\Bonitet.CRMWin\obj\Debug\Bonitet.CRMWin.csproj.GenerateResource.Cache
+C:\Nix\Project\Bonitet.CRMWin\obj\Debug\Bonitet.CRMWin.exe
+C:\Nix\Project\Bonitet.CRMWin\obj\Debug\Bonitet.CRMWin.pdb

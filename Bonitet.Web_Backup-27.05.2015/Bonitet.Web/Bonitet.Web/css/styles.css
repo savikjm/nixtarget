@@ -1,0 +1,95 @@
+﻿body {
+    background-color:#F4FDFD !important
+}
+.col-centered{
+    float: none;
+    text-align:center;
+}
+.custom_pagination {
+    display: block;
+    padding:0 !important;
+    border-radius: 0 !important;
+    margin: 0 !important;
+    width: 100% !important;
+    height: auto !important;
+}
+.custom_pagination a,
+.custom_pagination p {
+    display: inline-block;
+    padding: 0 5px;
+    font-size: 12px;
+    margin: 0;
+    line-height: 35px;
+}
+.search_container {
+    width:40%;
+}
+.search_container.short {
+    width:10%;
+    padding-left:16px;
+}
+
+.custom_width {
+    width:50%;
+}
+.align_left {
+    text-align:left;
+}
+#companies_table tr td {
+    font-size:12px !important;
+    text-align:left;
+}
+
+.navbar-default {
+    background-color: #008cba;
+    border-color: #006687;
+}
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus{
+    color:#fff;
+    background-color: #008cba;
+    font-weight:bold;
+}
+
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus,
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus{
+    color:#fff;
+    background-color:#006687 !important;
+}
+.navbar-default .navbar-nav>li>a,
+.navbar-default .navbar-brand{
+    color:#fff;
+    background-color: #008cba;
+}
+.pdf_icon {
+    background-image: url(../img/pdf-icon.png);
+    background-position: left center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+}
+.table_width .created_on {
+    width:10%;
+}
+.table_width .embs {
+    width:10%;
+}
+.table_width .company_name {
+    width:30%;
+}
+.table_width .username {
+    width:10%;
+}
+.table_width .year {
+    width:10%;
+}
+.table_width .report_type {
+    width:10%;
+}
+.table_width .status_text {
+    width:10%;
+}
+.table_width .action {
+    width:10%;
+}

@@ -1,0 +1,12 @@
+C:\Work\Bonitet\Project\Bonitet.DAL\bin\Release\Bonitet.DAL.dll.config
+C:\Work\Bonitet\Project\Bonitet.DAL\bin\Release\Bonitet.DAL.dll
+C:\Work\Bonitet\Project\Bonitet.DAL\bin\Release\Bonitet.DAL.pdb
+C:\Work\Bonitet\Project\Bonitet.DAL\obj\Release\Bonitet.DAL.dll
+C:\Work\Bonitet\Project\Bonitet.DAL\obj\Release\Bonitet.DAL.pdb
+C:\Work\Bonitet\Project\Bonitet.DAL\obj\Release\Bonitet.DAL.csprojResolveAssemblyReference.cache
+C:\Nix\Project\Bonitet.DAL\bin\Release\Bonitet.DAL.dll.config
+C:\Nix\Project\Bonitet.DAL\bin\Release\Bonitet.DAL.dll
+C:\Nix\Project\Bonitet.DAL\bin\Release\Bonitet.DAL.pdb
+C:\Nix\Project\Bonitet.DAL\obj\Release\Bonitet.DAL.csprojResolveAssemblyReference.cache
+C:\Nix\Project\Bonitet.DAL\obj\Release\Bonitet.DAL.dll
+C:\Nix\Project\Bonitet.DAL\obj\Release\Bonitet.DAL.pdb

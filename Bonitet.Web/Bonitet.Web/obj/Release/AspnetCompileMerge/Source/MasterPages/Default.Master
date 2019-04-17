@@ -1,0 +1,111 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Default.master.cs" Inherits="Bonitet.Web.MasterPages.Default" %>
+
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ебонитети.мк</title>
+    
+	<link rel="shortcut icon" type="image/x-icon" href="~/favicon.ico" />
+    <!-- Bootstrap -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/font-awesome.min.css"/>
+
+
+    <link href="../css/styles.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,500,300&subset=latin,cyrillic-ext,cyrillic' rel='stylesheet' type='text/css'>
+
+    
+    <script src="../js/jquery-1.11.1.min.js"></script>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <%--<div>
+            <nav class="navbar navbar-default" role="navigation">
+              <div class="container-fluid">
+                <div class="navbar-header">
+                  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </button>
+                  <a class="navbar-brand" href="/">еБонитети</a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                  <ul class="nav navbar-nav">
+                    <li runat="server" id="li_home" ><a runat="server" id="a_home" href="/Default.aspx">Дома</a></li>
+                    <li Visible="false" runat="server" id="li_profile" ><a runat="server" id="a_profile" href="/Authenticated/UserProfile.aspx">Мој профил</a></li>
+                    <li Visible="false" runat="server" id="li_companies"><a runat="server" id="a_companies" href="/Authenticated/CompanyListing.aspx">Нарачка на извештаи</a></li>
+                    <li runat="server" id="li_cenovnik"><a runat="server" id="a_cenovnik" href="/Pricelist.aspx">Ценовник</a></li>
+                    <li runat="server" id="li_about"><a runat="server" id="a_about" href="/AboutUs.aspx">Бонитетни извештаи</a></li>
+                    <li runat="server" id="li_contact"><a runat="server" id="a_contact"  href="/Contact.aspx">Контакт</a></li>
+                    <li Visible="false" runat="server" id="li_logout"><asp:LinkButton runat="server" OnClick="Logout_Click" Text="Одлогирај се"/></li>
+                  </ul>
+                </div><!-- /.navbar-collapse -->
+              </div><!-- /.container-fluid -->
+            </nav>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+            </asp:ContentPlaceHolder>
+            <script src="../js/bootstrap.min.js"></script>
+            <script src="../js/scripts.js"></script>
+        </div>--%>
+
+        <header class="main-header">
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                        aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">
+                    <img src="../img/eboniteti_new_logo.png" alt="Logo"/>
+                </a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav cl-effect-5">
+                    <li runat="server" id="li_home" ><a runat="server" id="a_home" href="/Default.aspx"><span data-hover="Дома">Дома</span></a></li>
+                    <li Visible="false" runat="server" id="li_profile" ><a runat="server" id="a_profile" href="/Authenticated/UserProfile.aspx"><span data-hover="Мој Профил">Мој Профил</span></a></li>
+                    <li Visible="false" runat="server" id="li_companies"><a runat="server" id="a_companies" href="/Authenticated/CompanyListing.aspx"><span data-hover="Нарачка на извештаи">Нарачка на извештаи</span></a></li>
+                    <li runat="server" id="li_cenovnik"><a runat="server" id="a_cenovnik" href="/Pricelist.aspx"><span data-hover="Ценовник">Ценовник</span></a></li>
+                    <li runat="server" id="li_about"><a runat="server" id="a_about" href="/AboutUs.aspx"><span data-hover="Бонитетни извештаи">Бонитетни извештаи</span></a></li>
+                    <li runat="server" id="li_contact"><a runat="server" id="a_contact"  href="/Contact.aspx"><span data-hover="Контакт">Контакт</span></a></li>
+                    <li Visible="false" runat="server" id="li_logout"><asp:LinkButton runat="server" OnClick="Logout_Click" Text="Одлогирај се"/></li>
+
+                </ul>
+            </div>
+            <!--/.nav-collapse -->
+        </div>
+    </nav>
+</header>
+
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+            </asp:ContentPlaceHolder>
+            <script src="../js/bootstrap.min.js"></script>
+            <script src="../js/scripts.js"></script>
+
+
+    </form>
+</body>
+</html>

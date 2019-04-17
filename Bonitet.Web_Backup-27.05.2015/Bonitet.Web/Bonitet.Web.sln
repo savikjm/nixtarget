@@ -1,0 +1,74 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bonitet.Web", "Bonitet.Web\Bonitet.Web.csproj", "{9E2239F2-A4D2-49F1-9516-0632676A6F12}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bonitet.ConsoleTest", "..\Bonitet.ConsoleTest\Bonitet.ConsoleTest.csproj", "{1681C582-4D06-414B-A50E-8CF4C0EE7C23}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bonitet.DAL", "..\Bonitet.DAL\Bonitet.DAL.csproj", "{B711C368-2279-473F-B7E6-6389B6DE35A0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bonitet.Win", "..\Bonitet.Win\Bonitet.Win.csproj", "{5975A56B-5696-48B2-9464-0855DA6206B3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bonitet.Document", "..\Bonitet.Document\Bonitet.Document.csproj", "{95E55433-2EC6-4F66-9936-A1EBD8F6CDE0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bonitet.Charts", "..\Bonitet.Charts\Bonitet.Charts.csproj", "{3E74A324-E915-48D0-9639-B6A614E79748}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 7
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://nix:8081/tfs/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Bonitet.Web\\Bonitet.Web.csproj
+		SccProjectName1 = Bonitet.Web
+		SccLocalPath1 = Bonitet.Web
+		SccProjectUniqueName2 = ..\\Bonitet.ConsoleTest\\Bonitet.ConsoleTest.csproj
+		SccProjectName2 = ../Bonitet.ConsoleTest
+		SccLocalPath2 = ..\\Bonitet.ConsoleTest
+		SccProjectUniqueName3 = ..\\Bonitet.DAL\\Bonitet.DAL.csproj
+		SccProjectName3 = ../Bonitet.DAL
+		SccLocalPath3 = ..\\Bonitet.DAL
+		SccProjectUniqueName4 = ..\\Bonitet.Win\\Bonitet.Win.csproj
+		SccProjectName4 = ../Bonitet.Win
+		SccLocalPath4 = ..\\Bonitet.Win
+		SccProjectUniqueName5 = ..\\Bonitet.Document\\Bonitet.Document.csproj
+		SccProjectName5 = ../Bonitet.Document
+		SccLocalPath5 = ..\\Bonitet.Document
+		SccProjectUniqueName6 = ..\\Bonitet.Charts\\Bonitet.Charts.csproj
+		SccProjectName6 = ../Bonitet.Charts
+		SccLocalPath6 = ..\\Bonitet.Charts
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9E2239F2-A4D2-49F1-9516-0632676A6F12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E2239F2-A4D2-49F1-9516-0632676A6F12}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E2239F2-A4D2-49F1-9516-0632676A6F12}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E2239F2-A4D2-49F1-9516-0632676A6F12}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1681C582-4D06-414B-A50E-8CF4C0EE7C23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1681C582-4D06-414B-A50E-8CF4C0EE7C23}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1681C582-4D06-414B-A50E-8CF4C0EE7C23}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1681C582-4D06-414B-A50E-8CF4C0EE7C23}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B711C368-2279-473F-B7E6-6389B6DE35A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B711C368-2279-473F-B7E6-6389B6DE35A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B711C368-2279-473F-B7E6-6389B6DE35A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B711C368-2279-473F-B7E6-6389B6DE35A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5975A56B-5696-48B2-9464-0855DA6206B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5975A56B-5696-48B2-9464-0855DA6206B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5975A56B-5696-48B2-9464-0855DA6206B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5975A56B-5696-48B2-9464-0855DA6206B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{95E55433-2EC6-4F66-9936-A1EBD8F6CDE0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95E55433-2EC6-4F66-9936-A1EBD8F6CDE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95E55433-2EC6-4F66-9936-A1EBD8F6CDE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95E55433-2EC6-4F66-9936-A1EBD8F6CDE0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3E74A324-E915-48D0-9639-B6A614E79748}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E74A324-E915-48D0-9639-B6A614E79748}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E74A324-E915-48D0-9639-B6A614E79748}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E74A324-E915-48D0-9639-B6A614E79748}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,117 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin.master.cs" Inherits="Bonitet.Web.MasterPages.Admin" %>
+
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bonitet</title>
+    
+	<link rel="shortcut icon" type="image/x-icon" href="~/favicon.ico" />
+    <!-- Bootstrap -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="../css/styles.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,500,300&subset=latin,cyrillic-ext,cyrillic' rel='stylesheet' type='text/css'>
+    
+    <script src="../js/jquery-1.11.1.min.js"></script>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+        <header class="main-header">
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                        aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">
+                    <img src="../img/eboniteti_new_logo.png" alt="Logo"/>
+                </a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav cl-effect-5">
+                    <li Visible="false" runat="server" class="dropdown" id="li_clients" >
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">Клиенти <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a runat="server" id="a_clients" href="/Admin/UserListing.aspx"><span data-hover="Листа">Листа</span></a>
+                            </li>
+                            <li Visible="false" runat="server" id="li_add" >
+                                <a runat="server" id="a_add" href="/Admin/CreateUser.aspx"><span data-hover="Додај клиент">Додај клиент</span></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li Visible="false" runat="server" id="li_packs" >
+                        <a runat="server" id="a_packs" href="/Admin/PrepayPackListing.aspx"><span data-hover="Пакети">Пакети</span></a></li>
+                    
+                    
+                    
+                    <li Visible="false" runat="server" id="li_generate" >
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">Извештаи <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li >
+                                <a runat="server" id="a_generate" href="/Admin/GenerateReport.aspx"><span data-hover="Генерирај целосен извештај">Генерирај целосен извештај</span></a>
+                            </li>
+                            <li Visible="false" runat="server" id="li_generate_force" >
+                                <a runat="server" id="a_generate_force" href="/Admin/GenerateReportForce.aspx"><span data-hover="Генерирај целосен извештај"><b>Генерирај целосен извештај (ЦРМ)</b></span></a>
+                            </li>
+                            <li Visible="false" runat="server" id="li_requests" >
+                                <a runat="server" id="a_requests" href="/Admin/ReportRequests.aspx"><span data-hover="Барања за извештаи">Барања за извештаи</span></a>
+                            </li>
+                            <li Visible="false" runat="server" id="li_user_reports" >
+                                <a runat="server" id="a_user_reports" href="/Admin/ReportsByDate.aspx"><span data-hover="Извештај во временски период">Извештај во временски период</span></a>
+                             </li>
+                            <li Visible="false" runat="server" id="li_request_logs" >
+                                <a runat="server" id="a_request_logs" href="/Admin/ReportRequestLogs.aspx"><span data-hover="Лог на барања за извештаи">Лог на барања за извештаи</span></a>
+                            </li>
+                        </ul>
+                    </li>
+                    
+                    
+                    <li Visible="false" runat="server" id="li_logout">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">Алатки <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li Visible="false" runat="server" id="li_password_change" >
+                        <a runat="server" id="a_password_change" href="/Admin/EditAdmin.aspx"><span data-hover="Промени лозинка">Промени лозинка</span></a></li>
+                            <li Visible="false" runat="server" id="li_year_change" >
+                        <a runat="server" id="a_year_change" href="/Admin/EditCurrentYear.aspx"><span data-hover="Тековна година">Тековна година</span></a></li>
+                            <li>
+                               <asp:LinkButton ID="LinkButton1" runat="server" OnClick="Logout_Click" Text="Одлогирај се"/>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!--/.nav-collapse -->
+        </div>
+    </nav>
+</header>
+
+
+
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+            </asp:ContentPlaceHolder>
+            <script src="../js/bootstrap.min.js"></script>
+            <script src="../js/scripts.js"></script>
+        </div>
+    </form>
+</body>
+</html>
